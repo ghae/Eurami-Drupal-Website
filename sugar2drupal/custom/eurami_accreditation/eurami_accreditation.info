@@ -1,0 +1,5 @@
+; $Id$
+name = Accreditation
+description = Accreditation voor Eurami
+core = 6.x
+package = Eurami

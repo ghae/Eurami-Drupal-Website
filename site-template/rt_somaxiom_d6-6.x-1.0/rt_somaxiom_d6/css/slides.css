@@ -1,0 +1,69 @@
+/*
+	Each slide
+	Important:
+	Set the width of your slides
+	Offeset for the 20px of padding
+	If height not specified height will be set by the slide content
+	Set to display block
+*/
+
+#slides .slide {
+	width: 910px;
+
+	display:block;
+	border: 0px solid #000;
+}
+
+#slides .slides_container {
+	margin-bottom: 10px;
+}
+
+
+
+ 
+
+.desc-container {
+	width: 500px;
+	border: 0px solid #000;
+}
+
+
+#rt-showcase #slides .feature-title {
+	color: #fff;
+}
+
+#slides .feature-title {
+	display: block;
+	font-size: 200%;
+	line-height: 130%;
+	margin: 10px 0 0;
+}
+
+#slides .feature-desc {
+	display: block;
+	margin: 0 0 20px;
+	font-size: 120%;
+	line-height: 130%;
+}
+
+/*
+	Pagination
+*/
+
+.pagination {
+	width: 960px;
+	overflow: hidden;
+}
+
+.pagination li {
+
+}
+
+.pagination li a {
+
+
+}
+
+.pagination li.current a {
+
+}

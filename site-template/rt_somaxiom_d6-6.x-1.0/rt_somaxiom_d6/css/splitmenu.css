@@ -1,0 +1,30 @@
+/**
+ * @package   Somaxiom Template - RocketTheme
+ * @version   1.5.3 April 20, 2011
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2011 RocketTheme, LLC
+ * @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+ */
+/* Global */
+.menutop li {height: auto;margin: 0;padding: 0;position: relative;list-style: none;}
+.menutop em {font-size: 80%;font-weight: normal;display: block;font-style: normal;}
+.menutop li .item .menutop li.active .item {display: block;margin: 0;text-decoration: none;float: none;width: auto;}
+
+/* Root Items */
+.menutop {list-style: none;margin: 0;padding: 15px 12px 4px 12px;position: relative;line-height: 1.0;overflow: hidden;}
+.menutop li {float: left;margin: 0 5px 0 0;height: 21px;}
+.menutop li .item {white-space: nowrap;display: block;text-transform: uppercase;padding: 0;font-size: 12px;z-index: 100;cursor: pointer;position:relative;margin: 0;outline: none;text-align: center;letter-spacing: 1px;}
+.menutop li .item span {display: block;margin: 0;outline: none;padding: 0 12px;width: auto;}
+.menutop li .item em {font-size: 11px;font-weight: normal;display: block;font-style: normal;text-transform: lowercase;line-height: 12px;}
+.menutop li.parent .item span {padding-right: 16px;}
+.menutop .subtext span {line-height: 9px;}
+.menutop li.active, .menutop li:hover {margin-bottom: -4px;}
+
+/* SubMenu Items */
+#rt-subnavigation ul.menu {margin: 0;padding: 0 12px;}
+#rt-subnavigation ul.menu li {list-style: none;float: left;margin: 0 5px 0 0;}
+#rt-subnavigation ul.menu li .item {white-space: nowrap;display: block;text-transform: uppercase;padding: 0;font-size: 11px;z-index: 100;cursor: pointer;position:relative;margin: 0;outline: none;text-align: center;letter-spacing: 1px;}
+#rt-subnavigation ul.menu li .item span {display: block;margin: 0;outline: none;padding: 8px 12px;width: auto;}
+#rt-subnavigation ul.menu li.active .item span, #rt-subnavigation ul.menu li:hover .item span {margin-bottom: -4px;}
+#rt-subnavigation .nopill ul.menu li .item:hover, #rt-subnavigation ul.menu li.active .item {}
+#rt-subnavigation ul.menu li.parent .item span {padding-right: 16px;}

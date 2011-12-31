@@ -1,0 +1,35 @@
+name = Somaxiom
+project = rt_somaxiom_d6
+project status url = http://updates.rockettheme.com/drupal/release-history
+description = Rockettheme Somaxiom Theme for Drupal
+version = 6.x-1.0
+core = 6.x
+engine = phptemplate
+
+features[] = slogan
+
+regions[top] = Top
+regions[header] = Header
+regions[navigation] = Navigation
+regions[showcase] = Showcase
+regions[utility] = Utility
+regions[feature] = Feature
+regions[maintop] = Main Top
+regions[contenttop] = Content Top
+regions[sidebar] = Sidebar
+regions[sidebar2] = Sidebar 2
+regions[contentbottom] = Content Bottom
+regions[mainbottom] = Main Bottom
+regions[bottom] = Bottom
+regions[footer] = Footer
+regions[copyright] = Copyright
+
+regions[debug] = Debug
+regions[analytics] = Analytics
+
+
+
+
+
+
+

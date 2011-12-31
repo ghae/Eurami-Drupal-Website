@@ -1,0 +1,20 @@
+/**
+ * @package   Somaxiom Template - RocketTheme
+ * @version   1.5.3 April 20, 2011
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2011 RocketTheme, LLC
+ * @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+ */
+
+a {-webkit-transition: color .4s ease-out;}
+.menutop li.active.root,
+.menutop li.active.root:hover,
+.menu-type-splitmenu .menutop li.active,
+.menu-type-splitmenu .menutop li.active:hover,
+.menutop li.active.root.f-mainparent-itemfocus,
+.menu-type-splitmenu .menutop li.active.f-mainparent-itemfocus {-webkit-transition: all .2s ease-out;}
+.menutop li.root:hover,
+.menutop li.root.f-mainparent-itemfocus,
+.menu-type-splitmenu .menutop li:hover,
+.menu-type-splitmenu .menutop li.f-mainparent-itemfocus {-webkit-transition: all .2s ease-out;}
+.menutop li.root > .item em {line-height: 12px !important;}

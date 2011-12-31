@@ -1,0 +1,280 @@
+/* $Id: styles.css,v 1.1 2009/06/26 00:33:39 duvien Exp $ */
+
+body{
+background:#444444;
+}
+#wrapper{
+background:#fff url(images/wrapperbg.jpg) repeat-x top left;
+}
+
+#page{
+min-height:500px;
+_height:500px;
+}
+
+h1#site-name {
+  margin-bottom: 0;
+}
+
+#site-header,
+#site-subheader,
+#footer-region,
+.column,
+.node,
+.comment,
+.block {
+  margin-bottom: 1.5em;
+}
+
+/* HTML Element */
+pre, code
+  {
+    font-size: 1.0em; /* Monospace fonts can be hard to read */
+    font-family: "Bitstream Vera Sans Mono", "Courier New", monospace;
+  }
+
+table
+  {
+    border-collapse: collapse;
+    width: 100%; /* Prevent cramped-looking tables */
+  }
+
+  th,
+  thead th,
+  tbody th
+  {
+    text-align: left;
+    padding-right: 0;
+    border-bottom: none;
+  }
+
+  tbody
+  {
+    border-top: none;
+  }
+
+/** abbreviations **/
+  abbr
+  {
+    border-bottom: 1px dotted #ccc;
+    cursor: help;
+    white-space: nowrap;
+  }
+
+  /* Date-based "abbreviations" show computer-friendly timestamps which are not
+     human-friendly. */
+  abbr.created
+  {
+    border: none;
+    cursor: auto;
+    white-space: normal;
+  }
+
+/** images **/
+  img
+  {
+    border: 0;
+  }
+
+/** horizontal rules **/
+  hr
+  {
+    height: 1px;
+    border: 1px solid #ccc;
+  }
+
+
+  fieldset
+  {
+    margin: 1em 0;
+    padding: 0.5em;
+	border:1px solid #ccc;
+  }
+
+fieldset {}
+
+/*
+** Formatting for administration page
+**
+** The admin panel styles are a mess. IE has problems with this so this is
+** only a temporary fix. This should be fixed in core.
+*/
+div.admin-panel {
+  padding: 0;
+}
+
+div.admin-panel .body {
+  padding: 0 !important;
+}
+
+div.admin .left,
+div.admin .right {
+  width: 50%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+div.admin .right .admin-panel {
+  margin-left: 10px;
+}
+
+/* Theme settings */
+#div-zen-debug strong
+  {
+    float: left;
+    width: 90px;
+    margin-left: 0;
+    margin-right: 10px;
+    text-align: left;
+  }
+  
+  
+#logo{
+padding-top:20px;
+}
+
+#navbar-inner{
+padding-top:10px;
+text-align:right;
+}
+#navbar-inner ul li a{
+color:#fff;
+text-decoration:none;
+}
+#navbar-inner ul li{
+color:#fff;
+background:url(images/menudivider.jpg) no-repeat left 2px;
+}
+#navbar-inner ul li.first{
+background:none;
+}
+
+#search-theme-form{
+text-align:right;
+margin-top:-35px;
+}
+
+#sidebar-left ul, #sidebar-left ul li{
+list-style:none;
+list-style-image:none;
+padding:0px;
+margin:0px;
+}
+#sidebar-left ul li a{
+color:#046aa7;
+border-top:1px dotted #d9d9d9;
+padding:4px;
+padding-left:10px;
+display:block;
+text-decoration:none;
+}
+
+#sidebar-left ul li a:hover, #sidebar-left ul li a.active{
+color:#000;
+}
+
+#sidebar-left ul li.expanded{
+background:#fafafa url(images/leftmenuexpandedbg.jpg) repeat-x top left;
+}
+
+#sidebar-left ul li.expanded li a{
+border-top:none;
+font-size:93%;
+padding:2px;
+padding-left:23px;
+}
+
+#sidebar-left ul li.expanded li a:hover, #sidebar-left ul li.expanded li a.active{
+background:url(images/blueaero.gif) no-repeat 17px 8px;
+}
+
+#sidebar-left ul li li.expanded{
+background:none;
+}
+
+#sidebar-left ul li li.expanded li a{
+border-top:none;
+font-size:88%;
+padding:1px;
+padding-left:35px;
+}
+
+#sidebar-left ul li li.expanded li a:hover, #sidebar-left ul li li.expanded li a.active{
+background:url(images/blueaero.gif) no-repeat 29px 7px;
+}
+
+
+#footer{
+background:url(images/footerbg.jpg) repeat-x top left;
+font-size:11px;
+color:#fff;
+padding-top:20px;
+padding-bottom:20px;
+height:100px;
+}
+
+#block-block-1{
+float:left;
+width:300px;
+padding-left:10px;
+}
+
+#block-menu-menu-footermenu{
+float:right;
+width:550px;
+padding-left:15px;
+}
+
+#block-menu-menu-footermenu ul, #block-menu-menu-footermenu ul li{
+list-style:none;
+list-style-image:none;
+margin:0px;
+padding:0px;
+text-align:right;
+}
+
+#block-menu-menu-footermenu ul li a{
+color:#fff;
+text-decoration:none;
+}
+
+#block-menu-menu-footermenu ul li{
+display:inline;
+padding-left:7px;
+padding-right:6px;
+background:url(images/footermenudivider.jpg) no-repeat left center;
+}
+#block-menu-menu-footermenu ul li.first{
+background:none;
+}
+
+#content-bottom{
+margin-top:20px;
+}
+
+#block-block-2{
+border:5px solid #ccc;
+width:277px;
+height:180px;
+float:left;
+padding:10px;
+padding-top:0px;
+margin-right:10px;
+}
+#block-block-3{
+border:5px solid #ccc;
+width:277px;
+height:180px;
+float:left;
+padding:10px;
+padding-top:0px;
+margin-right:10px;
+}
+#block-block-4{
+border:5px solid #ccc;
+width:276px;
+height:180px;
+float:left;
+padding:10px;
+padding-top:0px;
+}

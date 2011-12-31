@@ -1,0 +1,82 @@
+/* Light tabs **************************/
+
+ul.primary {
+  border-collapse: collapse;
+  padding: 0 0 0 10px; /* LTR */
+  white-space: nowrap;
+  list-style: none;
+  margin: 0;
+  height: 26px;
+  line-height: normal;
+  border-bottom: 1px solid #ccc;
+}
+
+ul.primary li a {
+  margin: -2px;
+  padding: 6px 20px 6px 20px;
+  background: #444 url(../images/tabs/light/tabs-on.png) left top no-repeat; 
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  text-decoration: none;
+  color: #999;
+}
+
+ul.primary li.active a {
+  background: #444 url(../images/tabs/light/tabs-off.png) left top no-repeat; 
+  border-top: 1.5px solid #ccc;
+  border-right: 1.5px solid #ccc;
+  border-left: 1.5px solid #ccc;
+  border-bottom: 0px solid #E4E4E4;
+  color: #555;
+}
+
+ul.primary li a:hover {
+  color: #000;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+/*********************************************************/
+
+
+
+.rt-joomla th {
+	background-color: transparent;
+}
+
+thead th { border-bottom: 1px solid #ccc; }
+
+fieldset, 
+form.variation-chooser input
+ { border: 1px solid #ccc; }
+
+fieldset, 
+form.variation-chooser input,  
+ul.secondary { border: 1px solid #ccc;  }
+
+
+form.variation-chooser input {
+	margin: 15px 5px 15px 0;
+	cursor:pointer;
+	background: #ccc url(../images/tabs/light/tabs-on.png) left top no-repeat;
+}
+
+input, textarea, file {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	color: #555;
+}
+
+#search-block-form input {
+	background-color: transparent;
+	border: 0;
+}
+
+#blocks td.region { border-bottom: 1px solid #ccc;}
+
+
+
+
+

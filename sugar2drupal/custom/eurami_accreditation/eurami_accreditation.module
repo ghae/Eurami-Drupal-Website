@@ -1,0 +1,259 @@
+<?php
+// $Id$
+/**
+ *  @file
+ *  Hooks for the module are defined here
+ *  A block called "my company" is created here
+ */
+
+function debug($var, $exit=FALSE) {
+  echo '<pre>';
+  print_r($var);
+  echo '</pre>';
+
+  if ($exit) {
+    exit;
+  }
+}
+
+
+/**
+ * Implementation of hook_autoload_info().
+ */
+function eurami_accreditation_autoload_info() {
+  return array(
+    'eurami_accreditation_company' => array('file' => 'classes/eurami_accreditation_company.php'),
+    'eurami_accreditation_accreditation' => array('file' => 'classes/eurami_accreditation_accreditation.php'),
+  );
+}
+
+
+/**
+ * Implementation of hook_block().
+ */
+function eurami_accreditation_block($op = 'list', $delta = 0, $edit = array()) {
+  $blocks = array();
+  $blocks['mycompany'] = array(
+    'info' => 'My company block',
+    'cache' => BLOCK_NO_CACHE,
+    'title' => t('Company Info'),
+  );
+  
+  $blocks['eurami_auditor'] = array(
+    'info' => 'Eurami auditor block',
+    'cache' => BLOCK_NO_CACHE,
+    'title' => t('Auditor'),
+  );
+  
+  $blocks['eurami_poll'] = array(
+    'info' => 'Eurami board member poll',
+    'cache' => BLOCK_NO_CACHE,
+    'title' => t('Eurami board member poll'),
+  );
+
+  switch ($op) {
+    case 'list': // block listing
+      return $blocks;
+    break;
+    case 'view': // block viewing
+      module_load_include('inc', 'eurami_accreditation', 'includes/eurami_accreditation.blocks');
+      module_load_include('inc', 'eurami_accreditation', 'includes/eurami_accreditation.helpers');
+
+      // other blocks
+      if (in_array($delta, array_keys($blocks))) {
+        if (function_exists('eurami_accreditation_block_'. $delta) && isset($blocks[$delta])) {
+          return call_user_func('eurami_accreditation_block_'. $delta, $blocks[$delta]);
+        }
+      }
+    break;
+  }
+}
+
+/**
+ * Implementation of hook_views_query_alter()
+ */
+function eurami_accreditation_views_query_alter(&$view, &$query) {
+  global $user;
+  
+  if ($view->name == 'show_visited_accredittations') {
+    // "Eurami administrator" users see everything
+    if (in_array('Eurami administrator', $user->roles)) {
+      foreach ($query->where[0]['clauses'] as $i => $clause) {
+        switch ($clause) {
+          case 'og_uid.uid = ***CURRENT_USER***':
+            unset($query->where[0]['clauses'][$i]);
+            break;
+        }
+      }
+    }
+  }
+}
+
+function eurami_accreditation_nodeapi(&$node, $op) {
+  global $user;
+  
+  switch ($op) {
+    case 'prepare':
+      if($node->type == 'company') {
+        drupal_set_title('Accreditation sign up');
+      }
+      break;
+    case 'insert':
+      if ($node->type == 'company') {
+        drupal_set_message(variable_get('company_created_msg', ''));
+        $_SESSION['msg_already_show'] = true;//set var to prevent msg of showing 2 times if the node is created
+      }
+      elseif ($node->type == 'file' || $node->type == 'image') {
+        drupal_goto($_GET['q'],array('gids' => $_GET['gids']));
+      }
+      break;
+    case 'view':
+      if($node->type == 'accreditiation') {
+        $_SESSION['acc_id'] = $node->nid;//get the active accreditation
+        
+        if($node->uid == $user->uid) { //Is this the user who created the acc?
+          $acc = new eurami_accreditation_accreditation($node->nid);
+          
+          switch($acc->getWorkflowState()) {
+            case eurami_accreditation_accreditation::READY_FOR_VISIT:
+            case eurami_accreditation_accreditation::VISITED:
+              drupal_set_message(t('The eurami auditors are currently looking over your application. You will be notified by email on their conclusion.'));
+              break;
+            case eurami_accreditation_accreditation::APPROVED:
+              drupal_set_message(t('Your accredition got approved and is now final!'));
+              break;
+            case eurami_accreditation_accreditation::REJECTED:
+              drupal_set_message(t('We are sorry, but your accredition got rejected. This discussion is final.'));
+              break;
+          }
+        }
+      }
+      elseif ($node->type == 'company' || ($node->type == 'page' && $node->nid == 141 && $user->uid)) {
+        if($node->type == 'company') {
+          //remove automatic link to accreditation on company page
+          if(IsSet($node->content['autocreategroup_reference'])) {
+            unset($node->content['autocreategroup_reference']);
+          }
+        }
+        
+        // display a message on the company and sign-up page if accreditation request is still pending
+        $company = new eurami_accreditation_company($user->uid);
+        $accrediation = $company->getActiveAccreditation();
+                
+        //check if the msg isn't shown already.
+        if ($accrediation && $accrediation->getWorkflowState() == eurami_accreditation_accreditation::REQUEST_PENDING
+            && !IsSet($_SESSION['msg_already_show'])) {
+          drupal_set_message(t('Your accreditation request is still pending administrative approval. You will be notified via email upon approval.'), 'status');
+        }
+        else { //remove the reminder of the creation company msg
+          unset($_SESSION['msg_already_show']);
+        }
+      }
+      break;
+    case 'presave':
+      if ($node->type == 'accreditiation' && !$node->nid) {//only if node doesnt exist yet
+        $company = new eurami_accreditation_company($user->uid);
+        $company->getNode();
+        $node->field_accreditiation_company = array(
+          array('nid' => $company->getNode()->nid)
+        );
+        //die('Saved  $company->nid = '. $company->getNode()->nid);
+        
+        $node->field_accreditiation_quiz_node = array(
+          array('nid' => variable_get('accr_survey_nid', ''))
+        );
+        $node->field_acc_quiz_auditor = array(
+          array('nid' => variable_get('accr_survey_auditor_nid', ''))
+        );
+        
+        /*
+         * Deze code mag pas gebruikt worden als de hele workflow doorlopen is
+         * $node->field_accreditiation_from[0]['value'] = date('Y-m-d');
+
+         * //expires in three year
+         * $node->field_accreditiation_from[0]['value2'] = date('Y-m-d', mktime(0, 0, 0, date("m"), date("d"), date("Y")+3));
+         */
+      }
+      break;
+  }
+}
+
+//save the result ID of the quiz to the accreditation
+function eurami_accreditation_quiz_finished($quiz, $score, $rid) {
+  if ($quiz->nid == variable_get('accr_survey_nid', '') ||
+     $quiz->nid == variable_get('accr_survey_auditor_nid', ''))
+  {
+    $company = new eurami_accreditation_company($GLOBALS['user']->uid);
+
+    if ($quiz->nid == variable_get('accr_survey_nid', '')) {
+      $node = $company->getActiveAccreditation()->getNode();
+      $node->field_accreditiation_quiz_result[0]['value'] = $rid;
+    }
+    elseif ($quiz->nid == variable_get('accr_survey_auditor_nid', '')) {
+      $accreditation = new eurami_accreditation_accreditation($_SESSION['acc_id']);
+      $node = $accreditation->getNode();
+      $node->field_acc_quiz_auditor_result[0]['value'] = $rid;
+    }
+    node_save($node);
+
+    if($quiz->nid == variable_get('accr_survey_nid', '')) {
+      drupal_goto('user/quiz/'. $rid .'/userresults');//goto result page, so the link in the eurami block shows as finished
+    } else {
+      drupal_goto('accreditation/'. $_SESSION['acc_id']);
+    }
+  }
+}
+
+/**
+ * Implementation of hook_ctools_plugin_dierctory() to let the system
+ * know we implement widget plugins.
+ */
+function eurami_accreditation_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'vud') {
+    return $plugin;
+  }
+}
+
+function eurami_accreditation_form_file_node_form_alter(&$form, &$form_state) {
+  unset($form['body_field']['format']);
+}
+
+function eurami_accreditation_form_image_node_form_alter(&$form, &$form_state) {
+  unset($form['body_field']['format']);
+}
+
+function eurami_accreditation_form_quiz_question_answering_form_alter(&$form, &$form_state) {
+  unset($form['navigation']['op']);
+}
+
+function eurami_accreditation_perm() {
+  return array('complete auditor survey','view list of pending accreditations');
+}
+
+function eurami_accreditation_flag($action, $flag, $content_id, $account) {
+  if ($action == 'flag' && $flag->name == 'ready_for_voting') {
+    $accreditation = node_load($content_id);
+
+    $poll = node_load(variable_get('mother_poll', ''));
+
+    // tell drupal it is a new one
+    $poll->is_new = true;
+    
+    // unset node en version id's
+    unset($poll->nid);
+    unset($poll->vid);
+    unset($poll->path);
+    
+    $poll->og_groups = array('0' => $accreditation->nid);
+    $poll->settings['max_choices'] = 1;//set the number of choices (only one choice)
+    node_save($poll);
+
+    //idea taken from http://drupal.org/node/239895
+    $sql = "INSERT INTO {og_ancestry} (nid, group_nid) VALUES (%d, %d)";
+    db_query($sql, $poll->nid, $accreditation->nid);
+    
+    //save pollreference in accreditation
+    $accreditation->field_accreditiation_poll[0]['nid'] = $poll->nid;
+    node_save($accreditation);
+  }
+}

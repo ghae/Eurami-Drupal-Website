@@ -1,0 +1,299 @@
+<?php
+/**
+ * Implementation of hook_user().
+ */
+function eurami_user_profile_user($op, &$edit, &$account, $category = NULL) {
+  switch ($op) {
+    case 'categories':
+      $categories = array(
+        array(
+          'name' => 'personal',
+          'title' => 'Personal information',
+          'weight' => 5,
+        ),
+        array(
+          'name' => 'address',
+          'title' => 'Address',
+          'weight' => 10,
+        ),
+        array(
+          'name' => 'social_media',
+          'title' => 'Social media',
+          'weight' => 15,
+        ),
+      );
+      return $categories;
+    case 'register':
+      $form['personal_info'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Personal info'),
+        '#collapsible' => FALSE,
+      );
+      $form['personal_info'] += _eurami_user_profile_personal_form(NULL, 'register');
+      $form['personal_info'] += _eurami_user_profile_address_form(NULL, 'register');
+      
+      //$form['#submit'][] = '_eurami_register_set_message';
+      return $form;
+    case 'insert':
+      drupal_set_message(t('You can now proceed with buying a membership or <a href="@start-accrediation">register for accreditation</a>.', array('@start-accrediation' => url('node/add/company'))), 'status');
+      break;
+    case 'form':
+       switch ($category) {
+         case 'personal':
+           return _eurami_user_profile_personal_form($account, 'account');
+           break;
+         case 'address':
+           return _eurami_user_profile_address_form($account, 'account');
+           break;
+         case 'social_media':
+           return _eurami_user_profile_social_media_form($account, 'account');
+           break;
+       }
+       break;
+    case 'view':
+      $account->content['personal'] = array(
+        '#type' => 'user_profile_category',
+        '#title' => t('Personal'),
+        '#weight' => -100,
+      );
+      $account->content['address'] = array(
+        '#type' => 'user_profile_category',
+        '#title' => t('Address'),
+        '#weight' => -95,
+      );
+      $account->content['other_address'] = array(
+        '#type' => 'user_profile_category',
+        '#title' => t('Alternative address'),
+        '#weight' => -90,
+      );
+      $account->content['social_media'] = array(
+        '#type' => 'user_profile_category',
+        '#title' => t('Social media'),
+        '#weight' => -80,
+      );
+      
+      _eurami_user_render_view($account,
+                               _eurami_user_profile_personal_form($account),
+                               'personal');
+      
+      $address = _eurami_user_profile_address_form($account);
+      _eurami_user_render_view($account,
+                               $address['primary_address'],
+                               'address');
+      _eurami_user_render_view($account,
+                               $address['other_address'],
+                               'other_address');
+      
+      _eurami_user_render_view($account,
+                               _eurami_user_profile_social_media_form($account),
+                               'social_media');
+    break;
+  }
+}
+
+function _eurami_user_render_view(&$account, $nodes, $tab, $subtab=null) {
+  // @todo: when there is a decision about the profile, we could make a 'real' profile here. for now, do some magic with loops to output field: values.
+  // $account_data = unserialize($account->data));
+  foreach ($nodes as $field_name => $field) {
+    if($field_name == '#type' || $field_name == '#title' || $field_name == '#weight' || empty($field['#default_value'])) {
+      continue;
+    }
+    
+    if(IsSet($field['#options']) && is_array($field['#options'])) {//if field is dropdown, select the label, not just the id
+      foreach($field['#options'] AS $option) {
+        if(IsSet($option->option[$field['#default_value']])) {//is this id the active id?
+          //overwrite the default value
+          $field['#default_value'] = $option->option[$field['#default_value']];
+          break;
+        }
+      }
+    }
+    
+    $newData = array(
+      '#type' => 'user_profile_item',
+      '#title' => $field['#title'],
+      '#value' => $field['#default_value'],
+      '#weight' => $field['#weight'],
+    );
+
+    if(is_null($subtab)) {
+      $account->content[$tab][$field_name] = $newData;
+    }
+    else {
+      $account->content[$tab][$subtab][$field_name] = $newData;
+    }
+  }
+}
+
+function _eurami_user_profile_personal_form($account = NULL, $type = 'account') {
+  $form['profile_salutation'] = array(
+    '#type' => 'select',
+    '#title' => t('Salutation'),
+    '#maxlength' => 255,
+    '#default_value' => $account->profile_salutation,
+    '#options' => array('Mr.' => 'Mr.', 'Ms.' => 'Ms.', 'Mrs.' => 'Mrs.', 'Dr.' => 'Dr.', 'Prof.' => 'Prof.'),
+    '#weight' => -100,
+  );
+  $form['profile_first_name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('First name'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => $account->profile_first_name,
+    '#weight' => -95,
+  );
+  $form['profile_last_name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Last name'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => $account->profile_last_name,
+    '#weight' => -90,
+  );
+  $form['profile_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Title'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => $account->profile_title,
+    '#weight' => -85,
+  );
+  $form['profile_department'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Department'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => $account->profile_department,
+    '#weight' => -80,
+  );
+  $form['profile_telephone'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Telephone'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => $account->profile_telephone,
+    '#weight' => -70,
+  );
+  $form['profile_mobile'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Mobile'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => $account->profile_mobile,
+    '#weight' => -65,
+  );
+  
+  return $form;
+}
+
+function _eurami_user_profile_address_form($account = NULL, $type = 'account') {
+  $form['primary_address'] = array(
+    '#title' => 'Primary address',
+    '#type' => 'fieldset',
+  );
+  $form['primary_address']['profile_primary_address_street'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Street'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => $account->profile_primary_address_street,
+    '#weight' => -100,
+  );
+  $form['primary_address']['profile_primary_address_city'] = array(
+    '#type' => 'textfield',
+    '#title' => t('City'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => $account->profile_primary_address_city,
+    '#weight' => -95,
+  );
+  $form['primary_address']['profile_primary_address_postal_code'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Postal code'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => $account->profile_primary_address_postal_code,
+    '#weight' => -90,
+  );
+  $form['primary_address']['profile_primary_address_state'] = array(
+    '#type' => 'textfield',
+    '#title' => t('State'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => $account->profile_primary_address_state,
+    '#weight' => -85,
+  );
+
+  $form['primary_address']['profile_primary_address_country'] = taxonomy_form(5, $account->profile_primary_address_country);
+  
+  $form['other_address'] = array(
+    '#title' => 'Other address',
+    '#type' => 'fieldset',
+    '#collapsible' => TRUE,
+    '#collapsed' => empty($account->profile_other_address_street) ? TRUE : FALSE,
+  );
+  $form['other_address']['profile_other_address_street'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Street'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => $account->profile_other_address_street,
+    '#weight' => -100,
+  );
+  $form['other_address']['profile_other_address_city'] = array(
+    '#type' => 'textfield',
+    '#title' => t('City'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => $account->profile_other_address_city,
+    '#weight' => -95,
+  );
+  $form['other_address']['profile_other_address_postal_code'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Postal code'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => $account->profile_other_address_postal_code,
+    '#weight' => -90,
+  );
+  $form['other_address']['profile_other_address_state'] = array(
+    '#type' => 'textfield',
+    '#title' => t('State'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => $account->profile_other_address_state,
+    '#weight' => -85,
+  );
+  
+  $form['other_address']['profile_other_address_country'] = taxonomy_form(5, $account->profile_other_address_country);
+  
+  return $form;
+}
+
+function _eurami_user_profile_social_media_form($account = NULL, $type = 'account') {
+  $form['profile_facebook'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Facebook'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => $account->profile_facebook,
+    '#weight' => -100,
+  );
+  $form['profile_twitter'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Twitter'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => $account->profile_twitter,
+    '#weight' => -95,
+  );
+  $form['profile_linkedin'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Linkedin'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => $account->profile_linkedin,
+    '#weight' => -90,
+  );
+  return $form;
+}

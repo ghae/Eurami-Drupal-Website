@@ -1,0 +1,191 @@
+<?php
+/*
+  • Accrediatiestatus en date worden nog niet gepulled, wel gepushed.
+  • Relatie tussen Company & Accrediation wordt niet doorgegeven aan Sugar CRM.
+*/
+require('includes/eurami_sugarcrm.mapping.inc');
+require('includes/eurami_sugarcrm.helpers.inc');
+
+/**
+ * Implementation of hook_perm();
+ */
+function eurami_sugarcrm_perm() {
+  return array(
+    'administer sugarcrm configuration'
+  );
+}
+
+
+/**
+ * Implementation of hook_menu();
+ */
+function eurami_sugarcrm_menu() {
+  $items = array();
+
+  $items['admin/eurami/sugarcrm'] = array(
+    'title' => 'Eurami SugarCRM Integration',
+    'description' => 'Manage your Drupal to SugarCRM integration',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('eurami_sugarcrm_admin_settings'),
+    'access arguments' => array('administer sugarcrm configuration'),
+    'type' => MENU_NORMAL_ITEM,
+    'weight' => 2,
+    'file' => 'includes/eurami_sugarcrm.admin.inc',
+  );
+  
+  return $items;
+}
+
+
+/**
+ * Implementation of hook_form_alter();
+ */
+function eurami_sugarcrm_form_alter(&$form, &$form_state, $form_id) {
+  switch($form_id) {
+    case 'user_login_block':
+    case 'user_login':
+      $form['#submit'][] = '_eurami_sugarcrm_user_pull'; 
+      break;
+    case 'user_profile_form':
+      //$form['account']['mail']['#disabled'] = TRUE;
+      $form['account']['mail']['#attributes'] = array('readonly' => 'readonly');
+      $form['account']['mail']['#description'] = t('You cannot change your emailaddress after registration');
+      $form['#submit'][] = '_eurami_sugarcrm_user_push'; 
+      break;
+    case 'user_register':
+      $form['#submit'][] = '_eurami_sugarcrm_user_push';
+      break;
+  }
+}
+
+
+/**
+ * Implementation of hook_nodeapi();
+ */
+
+function eurami_sugarcrm_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
+  if ($node->type == 'company') {
+    switch ($op) {
+      case 'prepare':
+        if ($node->nid) {
+          _eurami_sugarcrm_company_pull($node);
+        }
+      break;
+      case 'insert':
+        $sugarbean_id = _eurami_sugarcrm_company_push($node);
+        $node->field_sugarbean_id[0]['value'] = $sugarbean_id;
+        node_save($node);
+      break;
+      case 'update':
+        _eurami_sugarcrm_company_push($node);
+      break;
+    }
+  }
+  elseif($node->type == 'accreditaton') {
+    switch ($op) {
+      case 'insert':
+      case 'update':
+        
+        
+        
+        break;
+    }
+  }
+}
+
+/**
+ * Performs a REST request to the SugarCRM service
+ */
+function eurami_sugarcrm_api_request($method, $params = array(), $attempt = 1) {
+  global $sugar_session;
+  
+  if ($method != 'login') {
+    if (empty($sugar_session)) {
+      eurami_sugarcrm_api_get_session(TRUE);
+      
+    }
+    $params = array('session' => $sugar_session) + $params;
+  }
+  
+  $url = variable_get('eurami_sugarcrm_webservice_endpoint', NULL);
+  $encoding = variable_get('eurami_sugarcrm_rest_encoding', 'json');
+  
+  if (!$url) {
+    watchdog('Eurami SugarCRM', 'The web service end point is not set.', NULL, WATCHDOG_WARNING);
+    return FALSE;
+  }
+  
+  if ($attempt > 5) {
+    watchdog('Eurami SugarCRM', 'Request failed after !attempt attempts', array('!attempt' => $attempt), WATCHDOG_WARNING);
+    return FALSE;
+  }
+  
+  switch ($encoding) {
+    case 'json':
+      $query  = 'method='. $method .'&input_type=JSON&response_type=JSON&rest_data=' . urlencode(json_encode($params));
+      $output = drupal_http_request($url .'?'. $query);   
+  
+      $result = json_decode($output->data);
+      break;
+    case 'serialize':
+      $query  = 'method='. $method .'&input_type=Serialize&response_type=Serialize&rest_data=' . serialize($params);
+      $output = drupal_http_request($url .'?'. $query);
+      
+      $result = unserialize($output->data);
+      break;
+  }
+  
+  if (!is_array($result) && !is_string($result)) { // we can't use is_object because we don't have a definition of the remote object, resulting in a __PHP_Incomplete_Class Object
+    $result = get_object_vars($result);
+  }
+  
+  if (isset($result['number'])) {
+    $attempt++;
+    switch($result['number']) {
+      case 10: // invalid login
+        eurami_sugarcrm_api_get_session(TRUE);
+        eurami_sugarcrm_api_request($method, $params, $attempt);
+        break;    
+    }
+  }
+        
+  // for debugging purpose
+  //drupal_set_message($url .'?'. $query, 'warning');
+  //drupal_set_message('SugarCRM API response <br /><textarea style="width: 98%; height: 300px; font-family: courier">'.print_r($result, true).'</textarea>', 'warning');
+  
+  return $result;
+}
+
+
+/**
+ * Get, set or renew a SugarCRM session id
+ */
+function eurami_sugarcrm_api_get_session($renew = FALSE) {
+  global $sugar_session;
+  
+  if (!$sugar_session || $renew) {
+	  $method = 'login';
+	  $params = array(
+	    'user_auth' => array(
+	      'user_name' => variable_get('eurami_sugarcrm_api_user', ""),
+	      'password'  => md5(variable_get('eurami_sugarcrm_api_password', "")),
+	      'version'   => '1.0'
+	    ),
+	    'application_name' => 'EuramiSugarCRM',
+	    'name_value_list' => array(),
+	  );
+	
+	  $result = eurami_sugarcrm_api_request($method, $params);
+	  
+	  if(isset($result['id'])) {
+	    $sugar_session = $result['id'];
+	    //variable_set('eurami_sugarcrm_api_session', $session);
+	  }
+	  else {
+	    $sugar_session = NULL;
+	    return FALSE;
+	  }
+  }
+  
+  return TRUE;
+}

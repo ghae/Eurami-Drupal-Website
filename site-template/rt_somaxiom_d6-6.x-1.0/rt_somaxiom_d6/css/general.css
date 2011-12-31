@@ -1,0 +1,628 @@
+/* @override 
+	http://localhost/rt/drupal/development/reaction/sites/all/themes/rt_reaction_d6/css/general.css */
+
+
+
+/* Admin settings */
+form#system-theme-settings .form-item label {
+	width: 200px;
+	float: left;
+	padding-right: 5px;
+}
+
+form#system-theme-settings .escaped {
+	clear:both;
+	padding-top: 10px;
+}
+
+.theme-settings-bottom {
+	clear: left;
+}
+
+input, textarea, file {
+	padding: 2px;
+}
+
+
+form.variation-chooser input {
+	padding: 3px 7px;
+
+}
+
+/* Admin Tabs */
+
+ul.primary li {
+  display: inline;
+  line-height: 45px;
+}
+
+thead th { border-bottom: 1px solid #ddd; }
+
+
+.Button {
+	border: 0px;
+	background: none;
+	cursor: pointer;
+}
+
+.container-inline div,
+.container-inline label {
+	display: inline-block;
+}
+
+.container-inline a {padding-left: 10px;}
+
+
+.readon {
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+.login #user-login-form .readon {
+	padding-right: 90px;
+}
+
+.login #user-login-form .item-list {
+	font-size: 10px;
+	padding: 80px 40px 0 20px;
+}
+
+.readon-wrap1 {
+	display: inline-block;
+	height: 25px;
+	margin-left: 3px;
+}
+
+.readon-wrap1 .readon-main {
+	border: 0 none;
+	display: block;
+	float: left;
+	font-size: 12px;
+	height: 25px;
+	line-height: 25px;
+	margin-left: -3px;
+	padding: 0 10px 3px;
+}
+
+.readon-wrap1 .readon-main a:hover {
+	background-position: 0 -50px;
+}
+
+.module-content #poll-view-voting .readon {
+	float: left;
+}
+
+#rt-showcase #rt-submenu a {
+	color: #666666;
+}
+
+#rt-showcase #rt-submenu a:hover {
+	color: #222;
+}
+
+.icon-left span a {
+	color: #fff !important;
+}
+ 
+#blocks td.region { border-bottom: 1px solid #ddd;}
+
+.form-item .description {
+	text-align: left;
+	border: 0px solid #ccc;
+	clear: left;
+	/*font-style: italic;*/
+}
+
+/*Suckerfish overrides */
+
+#horiz-menu ul.menutop li ul {
+	margin-top: 3px;
+	padding: 5px 10px 5px 0;
+}
+
+#horiz-menu ul.sf-menu li ul {
+	margin-top: -3px;
+	padding: 5px 10px 5px 0;
+}
+
+#horiz-menu ul.sf-menu li ul li,
+#horiz-menu ul.menutop li ul li {
+	margin: 0 0 0 5px;
+}
+
+#horiz-menu ul.sf-menu li ul li:hover,
+#horiz-menu ul.menutop li ul li:hover {
+
+}
+
+
+/*Theme overrides */
+
+#showmodules .block.middle .moduletable {
+	padding: 0 5px 15px 3px;
+}
+
+#showmodules .block.last .moduletable {
+	padding: 0 0 15px 5px;
+}
+
+#mainmodules .block.middle .moduletable,
+#mainmodules .block.last .moduletable {
+	padding: 0 20px 15px 0;
+}
+
+table#menu-overview {
+	width: 100%;
+}
+
+table#blocks {
+	width: 100%;
+}
+
+#blocks td.region {
+	text-transform: uppercase;
+	font-size: 120%;
+	padding-top: 25px;
+}
+
+.update tr.ok,
+.update tr.unknown {
+	background: transparent;
+}
+
+.update tr td {
+	border-bottom: 1px solid #555;
+	border-top: 1px solid #555;
+}
+
+
+ul.roktabs-top li a {
+	font-size: 100%;
+	line-height: 42px;
+}
+
+td {
+	padding: 5px;
+}
+
+td.active {
+	background: transparent;
+}
+
+#logo_space {
+	width: 315px;
+	float: left;
+}
+
+#restore {
+	float: right;
+	margin-top: -15px;
+}
+
+#restore a {
+	color: #ccc;
+}
+
+#site_slogan {
+	text-align: center;
+	margin-top: -70px;
+	text-transform: lowercase;
+}
+
+.style6 #site_slogan, .style8 #site_slogan, .style9 #site_slogan { color: #555; }
+
+
+table.system-status-report th {
+	border: 0;
+}
+
+div.ok, tr.ok, div.error, tr.error {
+	color: inherit;
+}
+
+fieldset {
+	padding: 15px;
+}
+
+#inner_wrapper {
+	float: left;
+}
+
+
+
+.comment .content { padding: 10px 0 10px 0; }
+
+.comment-title a {
+	color: #fff;
+}
+
+.jclist .picture img {
+	width: 32px;
+	height: 32px;
+}
+
+form.variation-chooser input {
+	padding: 3px 7px;
+
+}
+
+
+
+form.variation-chooser input {
+	text-decoration: none;
+	color: #fff;
+}
+
+.style2 form.variation-chooser input,
+.style6 form.variation-chooser input,
+.style8 form.variation-chooser input,
+.style9 form.variation-chooser input {
+	color: #777;
+}
+
+
+/*.links a:hover {text-decoration: none;}*/
+
+.custom fieldset, .custom .Button, .custom input.button { border: 1px solid #454A2D; }
+
+
+
+/********************************/
+
+
+ul.secondary li {
+	border: 0;
+}
+
+ul.secondary a.active {
+  border: 0;
+  background: transparent;
+  padding: 4px 1em;
+  height: auto;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+
+
+.menutop ul li > .daddy span {
+	background-position: 90% 50%;
+}
+
+#leftcol .submenu-block ul.menu li a, #rightcol .submenu-block ul.menu li a { 
+	background: none; 
+	padding-left: 0px;
+}
+
+
+/* Forum Styling ***************/
+
+#forum {
+	padding: 0px;
+}
+
+#forum td.icon {
+	border: 0px;
+	background-position: 0 0;
+}
+
+#forum td.icon img {	
+	display: none;
+}
+
+#forum td.title {
+	background: transparent !important;
+}
+
+#forum ul.links {
+	float: right;
+	margin-bottom: 10px;
+}
+
+#forum table {
+	width: 100%;
+}
+
+.forum-topic-navigation {
+	margin-top: 20px;
+	border-bottom: 0px solid #e6e6e6;
+	border-top: 0px solid #e6e6e6;
+}
+
+ul.links.inline {
+	float: right;
+	padding-right: 20px;
+	font-style: italic;
+}
+
+.forum-topic-navigation .topic-previous {
+	text-align: left;
+}
+
+.forum-topic-navigation .topic-next {
+	text-align: right;
+}
+
+#forum tr.even, #forum tr.odd, #forum td {
+	background-color: transparent;
+	border-bottom: 1px solid #ddd;
+	
+}
+
+.forum-topic-navigation  .next {
+	float: right;
+}
+
+.forum-topic-navigation  .prev {
+	float: left;
+}
+
+#forum table {
+	margin: 5px 0 0 0;
+	border: 0px solid #ddd;
+	
+}
+
+#forum table thead {
+	margin: 0;
+	padding: 0;
+}
+
+
+#forum td {
+	padding: 5px 0 5px 10px;
+}
+
+#forum .name {
+	padding-left: 10px;
+	font-weight: bold;
+}
+
+#forum .description {
+	padding-left: 10px;
+	margin: 0;
+}
+
+#forum .title {
+	font-weight: bold;
+}
+
+#forum td.replies,
+#forum td.topics,
+#forum td.posts {
+	text-align: left;
+}
+
+#forum tr td.icon img {
+	display: none;
+}
+
+#forum tr td {
+	padding: 0px;
+
+}
+
+#forum tr td.icon {
+	background-image: url("../images/announce_read.png");
+}
+
+#forum tr td.forum {
+	padding-left: 40px;
+	background-color: transparent;
+	background-image: url("../images/announce_read.png");
+	background-position: 10px center;
+	height: 50px;
+}
+
+
+
+.rt-joomla tr.odd td, 
+.rt-joomla tr.even td {
+	border: 0px;
+}
+
+#forum tr td.icon {
+	margin-top: 5px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 27px;
+	height: 27px;
+	line-height: 30px;
+	float: none;
+	text-align: center;
+	padding-left: 5px;
+}
+
+
+
+#center-column table {
+	width: 100%;
+}
+
+/*****************************/
+
+.module-content .item-list h3 {
+	/*display: none;*/
+	font-weight: normal;
+	font-size: 120%;
+}
+
+
+div.item-list ul {
+	border: 0; 
+	list-style: none !important;
+}
+
+div.item-list ul li {
+	list-style: none !important; 
+	padding: 0 0 7px 0; 
+	margin-left: 0;
+	background: url(../images/typo/bullet-1.png) 0 5px no-repeat !important;
+}
+.item-list ul li a { padding: 0 0 0 0; font-weight: bold;}
+
+form .item-list ul {
+	padding: 10px 0 10px 0;
+}
+form .item-list ul li { 
+	text-align: left; 
+	padding: 0;
+}
+form .item-list ul li a { font-weight: normal; }
+
+/*.more-link {visibility: hidden;}*/
+
+.node-form {
+  display: table; 
+}
+
+#rightcol ul.menu li.expanded ul.menu li a, #leftcol ul.menu li.expanded ul.menu li a { background: none; text-indent: 10px;}
+#rightcol ul.menu li.expanded ul.menu li.expanded li a, #leftcol ul.menu li.expanded ul.menu li.expanded li a {text-indent: 30px;}
+
+#rightcol ul.menu li.active-trail a, #leftcol ul.menu li.active-trail a {font-weight: bold;}
+
+#rt-main-surround ul.menu li.expanded ul.menu {
+	margin-left: 20px;
+}
+
+#rightcol ul.menu li.active-trail a.active,
+#rightcol ul.menu li.active-trail ul.menu a.active, 
+#leftcol ul.menu li.active-trail a.active,
+#leftcol ul.menu li.active-trail ul.menu a.active
+{font-weight: bold;}
+
+#rightcol ul.menu li ul.menu li a, #leftcol ul.menu li ul.menu li a {
+	font-size: 12px;
+}
+
+#rightcol .side-mod .item-list h3, #leftcol .side-mod .item-list h3 { background: none; margin-left: -15px; border-bottom: 0;}
+
+body.cssstyle-style1 .poll .bar .foreground { background-color: #ccc; }
+body.cssstyle-style2 .poll .bar .foreground { background-color: #ccc; }
+body.cssstyle-style3 .poll .bar .foreground { background-color: #ccc; }
+body.cssstyle-style4 .poll .bar .foreground { background-color: #ccc; }
+body.cssstyle-style5 .poll .bar .foreground { background-color: #ccc; }
+body.cssstyle-style6 .poll .bar .foreground { background-color: #ccc; }
+body.cssstyle-style7 .poll .bar .foreground { background-color: #999; }
+body.cssstyle-style8 .poll .bar .foreground { background-color: #fff; }
+
+form#poll-view-voting h4 {margin-top: 5px;}
+h4.poll-title {margin-top: -1px;}
+h2.front {margin-top: 0;}
+
+.dotted {
+	border-bottom: 1px dotted #ccc;
+	padding: 8px;
+	margin-bottom: 10px;
+}
+
+.separator {
+	margin: 15px 0 15px 0;
+	border-bottom: 1px solid #ddd;
+	padding: 5px 0 5px 0;
+	clear:both;
+}
+
+.form-item {
+	border: 0;
+}
+
+
+
+
+.breadcrumbs img {
+	border: 0px;
+}
+
+
+
+#search-block-form .form-item .Button {
+	display: none !important;
+}
+
+
+
+#searchmod .Button {
+	visibility: hidden;
+	overflow: hidden;
+	display: none;
+}
+
+#user-login-form .Button {
+	margin-top: -1px;
+}
+
+
+#user-login-form label {
+	font-size: 0.9em;
+}
+
+
+
+
+.module-content form#user-login-form {
+	padding-top: 70px;
+}
+
+
+#user-login-form #edit-name-wrapper, 
+#user-login-form #edit-pass-wrapper {
+	
+}
+
+#user-login-form #edit-name, #edit-pass {
+	width: 158px;
+	padding-left: 5px;
+	font-size: 12px;
+	height: 18px;
+	border: 0px;
+	margin-right: 30px;
+}
+
+form#search-wipe-confirm a {
+	padding-left: 10px;
+}
+
+form#search-wipe-confirm .Button a {
+	padding-left: 0px;
+}
+
+form#search-block-form #edit-submit,
+form#search-block-form .form-submit {
+	display: none;
+}
+
+/*
+#search-block-form .form-item 
+	{background: #e9e9e9 url(../images/body/main/sidemenu-bg.png) 0 0 repeat-x;border-top: 1px solid #d4d4d4;border-right: 1px solid #fff;border-bottom: 1px solid #fff;border-left: 1px solid #d4d4d4;}
+*/
+
+#sl_lostpass {
+	display: none;
+}
+
+.content-row-last {
+	border-bottom: 0px;
+}
+
+tbody {
+  border-top: 0px solid #ccc;
+}
+
+ul.menu li {
+	margin-left: 0;
+}
+
+.block-region {
+  padding: 1em;
+  background: transparent;
+  border: 2px dashed #ccc;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.hidden {
+	display: none;
+}
+

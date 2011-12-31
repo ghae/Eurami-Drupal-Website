@@ -1,0 +1,3 @@
+<?php
+
+include_once('eurami_company_type.features.inc');

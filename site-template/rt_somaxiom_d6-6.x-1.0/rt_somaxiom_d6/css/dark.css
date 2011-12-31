@@ -1,0 +1,89 @@
+/* Dark tabs **************************/
+ul.primary  {
+  border-collapse: collapse;
+  padding: 0 0 0 10px; /* LTR */
+  white-space: nowrap;
+  list-style: none;
+  margin: 0;
+  height: 26px;
+  line-height: normal;
+  border-bottom: 1px solid #333;
+}
+
+ul.primary li a {
+  margin: -2px;
+  padding: 6px 20px 6px 20px;
+  background: #444 url(../images/tabs/dark/tabs-on.png) left top no-repeat; 
+  border-top: 1px solid #444;
+  border-right: 1px solid #444;
+  border-left: 1px solid #444;
+  text-decoration: none;
+  color: #999;
+}
+
+ul.primary li.active a {
+  background: #444 url(../images/tabs/dark/tabs-off.png) left top no-repeat; 
+  border-top: 1.5px solid #444;
+  border-right: 1.5px solid #444;
+  border-left: 1.5px solid #444;
+  border-bottom: 0px solid #E4E4E4;
+  color: #555;
+}
+
+ul.primary li a:hover {
+  color: #fff;
+  border-top: 1px solid #555;
+  border-right: 1px solid #555;
+  border-left: 1px solid #555;
+}
+
+/*********************************************************/
+
+#forum tr td.icon {
+	background-image: url("../images/dark/forum_read.gif");
+}
+
+#forum tr td.forum {
+
+	background-color: transparent;
+	background-image: url("../images/dark/forum_read.gif");
+	background-position: left center;
+}
+
+tr.even, tr.odd {
+	border-bottom-color: #555;
+}
+
+.rt-joomla tr.even td { background-color: #000 !important; }
+.rt-joomla tr.odd td { background-color: #444 !important; }
+
+thead th { border-bottom: 1px solid #444; }
+
+fieldset, 
+form.variation-chooser input, 
+ul li.node_read_more, 
+ul.secondary
+ { border: 1px solid #333; -moz-border-radius: 0px; -webkit-border-radius: 0px; }
+
+
+form.variation-chooser input,
+ul li.node_read_more  {
+	margin: 15px 5px 15px 0;
+	cursor:pointer;
+	background: #333 url(../images/tabs/dark/tabs-on.png) left top no-repeat;
+}
+
+input, textarea, file {
+	background-color: #333;
+	border: 1px solid #555;
+	color: #fff;
+}
+
+
+#blocks td.region { border-bottom: 1px solid #444;}
+
+#searchmod .form-text,
+#pollbutton .button { color: #ccc; }
+
+.secondary li a.active {color:#fff;}
+

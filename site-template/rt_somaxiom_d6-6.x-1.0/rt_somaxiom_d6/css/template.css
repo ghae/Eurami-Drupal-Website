@@ -1,0 +1,212 @@
+/**
+ * @package   Somaxiom Template - RocketTheme
+ * @version   1.5.3 April 20, 2011
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2011 RocketTheme, LLC
+ * @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+/* Core */
+html, body {margin-bottom: 1px;height: 100%;}
+body {font-family: Helvetica,Arial,sans-serif;}
+.rt-container, #rt-sidebar-a, #rt-sidebar-b, #rt-sidebar-c {background: transparent;}
+ul {list-style-image: none;}
+ul.menu {padding-left: 0;}
+#rt-content-top, #rt-content-bottom {clear: both;overflow: visible;}
+#rt-debug {padding-top: 20px;position: relative;}
+
+/* Header */
+#rt-header {padding: 15px 0;}
+
+/* Logo */
+#rt-logo {width: 420px;height: 180px;margin: 0 auto;display: block;}
+
+/* Menu Dropdowns */
+.menutop ul, .menutop ul.columns2 {float: left;}
+
+/* Showcase */
+#rt-showcase {padding: 15px 0;}
+.bodylevel-low #rt-showcase {background: none;}
+
+/* Feature */
+#rt-feature {padding: 15px 0;}
+
+/* Main Body */
+#rt-main {padding: 15px 0;}
+.bodylevel-low #rt-main {background: none;}
+
+/* Modules */
+.module-title .title {margin-top: 0;font-weight: normal;font-size: 210%;padding: 0;letter-spacing: normal;text-transform: lowercase;}
+
+/* Module Variations */
+.tab1 .rt-module-surround, .tab2 .rt-module-surround, .tab3 .rt-module-surround {margin: -65px -16px -16px -16px;padding: 65px 15px 15px 15px;position: relative;z-index: 1;}
+.tab1 .module-title-surround, .tab2 .module-title-surround, .tab3 .module-title-surround {margin-left: -5px;position: relative;z-index: 2;}
+.tab1 .module-title, .tab2 .module-title, .tab3 .module-title {height: 61px;margin-bottom: 15px;display: inline-block;margin-left: 11px;}
+.tab1 .module-title .title, .tab2 .module-title .title, .tab3 .module-title .title {margin-bottom: 0;padding: 0 20px 0 15px;height: 61px;line-height: 61px;font-size: 150%;margin-left: -11px;overflow: hidden;}
+.flush .rt-block {padding: 0;}
+.flushtop .rt-block {padding-top: 0;}
+.flushbottom .rt-block {padding-bottom: 0;}
+#rt-popup {display: none;}
+.number .module-content ul.menu li {list-style-type: decimal-leading-zero;margin-bottom:3px;}
+
+/* Side Menus */
+.module-content ul.menu {margin-left: 0;}
+.module-content ul.menu li {list-style: none;margin: 0;}
+.module-content ul.menu a, 
+.module-content ul.menu ul.level2 a,
+.module-content ul.menu .separator, 
+.module-content ul.menu .item 
+{text-indent: 60px;overflow: hidden;font-size: 125%;font-weight: normal;padding: 0 0 8px 60px;line-height: 100%;text-transform: uppercase;}
+.module-content ul.menu li.active > a, .module-content ul.menu li.active > .separator, .module-content ul.menu li.active > .item {font-weight: bold;}
+.module-content ul.menu ul {padding-top: 10px;padding-bottom: 10px;}
+.module-content ul.menu li li {padding: 0;margin: 0;font-size: 100%;}
+.module-content ul.menu li li a, .module-content ul.menu li li .separator, .module-content .module-content ul.menu li li .item {padding-bottom: 15px;text-transform: none;}
+.module-content ul.menu .subtext em {line-height: 14px;}
+.module-content ul.menu em {display: block;font-size:80%;font-style: normal;font-weight: normal; margin-bottom: 5px;}
+.module-content ul.menu .image img {float: left;}
+
+/* Main Bottom */
+#rt-mainbottom {padding: 15px 0;}
+
+/* Bottom */
+#rt-bottom {padding: 15px 0;}
+
+/* Footer */
+#rt-footer-surround {padding-bottom: 5px;margin-bottom: 10px;}
+#developed-by {margin: 5px 0;float: left;font-size: 150%;}
+#powered-by {margin: 5px 0;float: right;font-size: 150%;}
+#rocket {display:inline-block;width: 148px;height: 20px;margin:0 0 0 10px;vertical-align:middle;}
+#gantry-logo {display:inline-block;width: 102px;height: 26px;margin-left: 10px;vertical-align:middle;background-position: 0 -36px;}
+.totop-test {padding: 10px;overflow: hidden;}
+
+/* Copyright */
+#rt-copyright {padding: 5px 0;}
+#rt-copyright .rt-block {margin-bottom: 0;}
+.copytext {padding: 10px 0;display: block;}
+
+/* Typography */
+.readon {display: inline-block;height: 17px;}
+.module-content .readon {float: right;}
+.readon input.button {outline: none;height: 17px;}
+.readon span {display: block;padding: 0 6px 0 54px;border: 0;font-size: 11px;cursor: pointer;line-height: 18px;font-weight: normal;overflow:visible;text-transform: lowercase;height: 18px;}
+.readon .button {display: block;padding: 0 6px 0 18px;border: 0;font-size: 11px;cursor: pointer;line-height: 17px;font-weight: normal;overflow:visible;text-transform: lowercase;height: 17px;margin: 0;}
+.readon span span {display: inline;background: none;margin-left: 0;padding: 0;float: none;}
+.readon:hover span, .readon-main:hover .readon1-r {background-position: 0 -28px;}
+.readon:hover .button {background-position: -35px -28px;}
+.rokradios, .rokchecks {padding: 1px 5px 5px 16px;line-height: 120%;cursor: pointer;}
+.rokradios {background-position: 0 3px;background-repeat: no-repeat;}
+.rokradios-active {background-position: 0 -240px;background-repeat: no-repeat;}
+.rokchecks {background-position: 0 -493px;background-repeat: no-repeat;}
+.rokchecks-active {background-position: 0 -742px;background-repeat: no-repeat;}
+#form-login ul li a, #com-form-login ul li a, ul.rt-more-articles li a, .rt-section-list ul li a, ul.mostread li a, ul.latestnews li a, .weblinks ul li a {background-position: 0 50%;background-repeat: no-repeat;}
+#rt-main .inputbox, #rt-main input#email, #rt-main input#name, #rt-main input#username, #rt-main input#password, #rt-main input#password2, #rt-main input#passwd {background: none;}
+.date-block .date {font-size: 14px;font-weight: bold;}
+
+/* Breadcrumbs */
+#rt-breadcrumbs {padding: 0 25px;}
+#breadcrumbs-home {width: 16px;height: 16px;display: block;float: left;margin-right: 5px;}
+#breadcrumbs-home:hover {background-position: -35px -70px;}
+#breadcrumbs h3, .leading_separator {display: none;}
+.rt-breadcrumb-surround {position: relative;overflow: hidden;padding: 0;margin: 10px 0;display: inline-block;height: auto;}
+span.breadcrumbs {display: inline-block;font-size: 130%;font-weight: bold;overflow: hidden;}
+span.breadcrumbs img {width: 6px;height: 16px;float: left;}
+span.breadcrumbs a, span.no-link {padding: 0 12px 0 8px;float: left;display: block;line-height: 16px;font-size: 90%;}
+
+/* Login Popup Feature */
+#rt-login-button .buttontext span {font-weight: bold;cursor: pointer;}
+#rt-popup .module-content {margin: 0;}
+#rt-popup .rt-block {padding: 0 5px;}
+#rt-popup .title {padding: 0;margin-bottom: 10px;margin-top: 5px;}
+#rt-popup .inputbox {width: 95%;}
+
+/* Login Form */
+.login {margin-top: 15px;}
+.login #form-login {position: relative;padding-top: 80px;}
+.login #form-login .inputbox {border: 0;}
+.login #form-login .user-greeting {text-align: center;}
+.login #form-login .readon .button {background-position: 0 0;padding-left: 54px;}
+.login #form-login .readon:hover .button {background-position: 0 -28px;}
+.login #form-login-remember {text-align: center;}
+.login #form-login ul {margin-top: 45px;padding: 0;}
+.login #form-login-username {margin-bottom: 11px;}
+.login #form-login-username .inputbox, .login #form-login-password .inputbox {font-size: 12px;height: 14px;}
+.bodystyle-none .login .module-title {left: 15px !important;top: 0 !important;}
+.bodystyle-none .login #form-login .inputbox {margin-left: 0 !important;}
+.bodystyle-none .login #form-login-username {margin-top: 25px;}
+.bodystyle-none .login #form-login-remember {text-align: left;}
+.bodystyle-none .login #form-login ul {margin-top: 10px;}
+.bodystyle-none .login .readon {float: left !important;}
+
+/* Login Form - Grid 3 */
+.col12 .rt-grid-3 .login {min-height: 225px;}
+.col12 .rt-grid-3 .login .module-title {position: absolute;right: 15px;top: 35px;}
+.col12 .rt-grid-3 .login #form-login .readon {float: right;margin-right: 48px;}
+.col12 .rt-grid-3 .login #form-login .inputbox {width: 157px;margin-left: 5px;}
+
+/* Login Form - Grid 4 */
+.col12 .rt-grid-4 .login {min-height: 235px;}
+.col12 .rt-grid-4 .login .module-title {position: absolute;right: 55px;top: 35px;}
+.col12 .rt-grid-4 .login #form-login .readon {float: right;margin-right: 90px;}
+.col12 .rt-grid-4 .login #form-login .inputbox {width: 157px;margin-left: 43px;}
+
+/* Login Form - Grid 5 */
+.col12 .rt-grid-5 .login, .col12 .rt-grid-6 .login, .col12 .rt-grid-7 .login, .col12 .rt-grid-8 .login, .col12 .rt-grid-9 .login, .col12 .rt-grid-10 .login, .col12 .rt-grid-11 .login, .col12 .rt-grid-12 .login {min-height: 260px;}
+.col12 .rt-grid-5 .login .module-title, .col12 .rt-grid-6 .login .module-title, .col12 .rt-grid-7 .login .module-title, .col12 .rt-grid-8 .login .module-title, .col12 .rt-grid-9 .login .module-title, .col12 .rt-grid-10 .login .module-title, .col12 .rt-grid-11 .login .module-title, .col12 .rt-grid-12 .login .module-title {position: absolute;right: 95px;top: 45px;}
+.col12 .rt-grid-5 .login .readon, .col12 .rt-grid-6 .login .readon, .col12 .rt-grid-7 .login .readon, .col12 .rt-grid-8 .login .readon, .col12 .rt-grid-9 .login .readon, .col12 .rt-grid-10 .login .readon, .col12 .rt-grid-11 .login .readon, .col12 .rt-grid-12 .login .readon {float: right;margin-right: 135px;}
+.col12 .rt-grid-5 .login #form-login .inputbox, .col12 .rt-grid-6 .login #form-login .inputbox, .col12 .rt-grid-7 .login #form-login .inputbox, .col12 .rt-grid-8 .login #form-login .inputbox, .col12 .rt-grid-9 .login #form-login .inputbox, .col12 .rt-grid-10 .login #form-login .inputbox, .col12 .rt-grid-11 .login #form-login .inputbox, .col12 .rt-grid-12 .login #form-login .inputbox {width: 157px;margin-left: 77px;}
+
+/* Font Sizer Feature */
+#rt-accessibility .rt-desc {display: block;float: left;font-size: 14px;font-weight: bold;}
+#rt-accessibility .button {display: block;width: 15px;height: 15px;}
+#rt-accessibility a.small .button {background-position: 0 0;background-repeat: no-repeat;}
+#rt-accessibility a.small:hover .button {background-position: 0 -15px;background-repeat: no-repeat;}
+#rt-accessibility a.large .button {background-position: -15px 0;background-repeat: no-repeat;}
+#rt-accessibility a.large:hover .button {background-position: -15px -15px;background-repeat: no-repeat;}
+
+/* Custom Content */
+.content-image-surround {float: right;margin-left: 15px;margin-bottom: 15px;position: relative;}
+.caption-icon {width: 26px;height: 26px;position: absolute;bottom: 12px;left: 4px;text-align: center;line-height: 26px;}
+.caption-text {height: 26px;position: absolute;bottom: 12px;left: 30px;line-height: 26px;padding: 0 8px;}
+.content-mask-surround {position: relative;width: 80px;height: 80px;margin: 0 auto;margin-bottom: 15px;}
+.content-mask {position: absolute;width: 80px;height: 80px;top: 0;left: 0;}
+.rokstories-demo-title {font-size: 85px;line-height: 60px;text-transform: lowercase;letter-spacing: -5px;margin-right: 12px;display: inline-block;}
+.rokstories-demo-title2 {font-size: 115px;line-height: 105px;text-transform: lowercase;letter-spacing: -5px;display: inline-block;}
+.rokstories-demo-title3 {font-size: 115px;line-height: 115px;text-transform: lowercase;display: block;letter-spacing: -5px;margin: -27px 0 10px 120px;}
+.rokstories-demo-desc {margin-left: 122px;font-size: 16px;line-height: 120%;}
+
+/* iPhone */
+body #gantry-viewswitcher {z-index: 100;right:50%;position:relative;top:inherit;right:inherit;margin: 1em auto;}
+
+
+/**CUSTOM CSS BY PHPRO**/
+.company-node-detail .left-col {
+ 
+  width: 375px;
+}
+.company-node-detail .right-col {
+  float: right;
+  width: 200px;
+}
+
+.company-node-detail  .company-title .left-col {
+  width: 500px;
+}
+
+.company-node-detail  .company-title .right-col {
+  text-align: right;
+  width: 80px;
+}
+
+.company-node-detail  .box {
+  margin-bottom: 20px;
+  border: 1px silver dotted;
+  padding: 6px;
+}
+
+.company-node-detail .telephone {
+  margin-bottom: 10px;
+}
+
+.company-node-detail .line {
+  margin-bottom: 5px;
+}

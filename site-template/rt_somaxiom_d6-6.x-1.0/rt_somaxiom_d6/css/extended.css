@@ -1,0 +1,303 @@
+/**
+ * @package   Somaxiom Template - RocketTheme
+ * @version   1.5.3 April 20, 2011
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2011 RocketTheme, LLC
+ * @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+/* JomSocial Overrides*/
+/* Main Component */
+/* Top Menu */
+body #rt-main #rt-mainbody #community-wrap #cToolbarNav.cToolbar {background-position: 50% 5px !important;}
+body #rt-main #community-wrap #cToolbarNav.cToolbar .cToolbar, body #rt-main #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList div {background-position: 50% 0 !important;}
+body #rt-main #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList div, body #rt-main #community-wrap #cToolbarNav.cToolbar .cToolbar, body #rt-main #rt-mainbody #community-wrap #cToolbarNav.cToolbar  {background-image:url("../images/menus/style1/menutop-bg.png") !important;background-color: #000 !important;background-repeat: repeat !important;}
+body #rt-main #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li.toolbar-active div a {border-bottom:2px solid #3D3D3D !important;}
+body #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li a:hover, body #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li.toolbar-active a{background:none !important;}
+body.cssstyle-style1 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li.toolbar-active a{border-bottom:4px solid #89B6B6;}
+body.cssstyle-style2 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li.toolbar-active a{border-bottom:4px solid #A76E40;}
+body.cssstyle-style3 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li.toolbar-active a{border-bottom:4px solid #475D5B;}
+body.cssstyle-style4 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li.toolbar-active a{border-bottom:4px solid #355469;}
+body.cssstyle-style5 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li.toolbar-active a{border-bottom:4px solid #713155;}
+body.cssstyle-style6 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li.toolbar-active a{border-bottom:4px solid #89B6B6;}
+body.cssstyle-style7 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li.toolbar-active a{border-bottom:4px solid #AEAD9F;}
+body.cssstyle-style8 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li.toolbar-active a{border-bottom:4px solid #999;}
+body.cssstyle-style1 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li a:hover, body.cssstyle-style1 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li.toolbar-active a {color:#89B6B6 !important;}
+body.cssstyle-style2 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li a:hover, body.cssstyle-style2 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li.toolbar-active a {color:#A76E40 !important;}
+body.cssstyle-style3 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li a:hover, body.cssstyle-style3 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li.toolbar-active a {color:#475D5B !important;}
+body.cssstyle-style4 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li a:hover, body.cssstyle-style4 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li.toolbar-active a {color:#355469 !important;}
+body.cssstyle-style5 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li a:hover, body.cssstyle-style5 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li.toolbar-active a {color:#713155 !important;}
+body.cssstyle-style6 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li a:hover, body.cssstyle-style6 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li.toolbar-active a{color:#89B6B6 !important;}
+body.cssstyle-style7 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li a:hover, body.cssstyle-style7 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li.toolbar-active a {color:#AEAD9F !important;}
+body.cssstyle-style8 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li a:hover, body.cssstyle-style8 #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li.toolbar-active a {color:#999 !important;}
+body #rt-main #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li#toolbar-item-logout, body #rt-main #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li#toolbar-item-logout a  {color:#fff !important;}
+body #rt-main #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li a {background:none !important;padding:0 12px !important;}
+body #rt-main #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li {background:none !important;}
+body #rt-main #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList div {margin-top:13px !important;}
+body #rt-main #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li.toolbar-active div {margin-top:9px !important;}
+body #rt-main #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li#toolbar-item-logout, body #rt-main #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li#toolbar-item-logout a  {background:none !important;padding:0 12px !important;float:right !important;}
+
+/* Sub Menu */
+body #rt-main #community-wrap .cSubmenu {-moz-border-radius:0 0 0 0;}
+body #rt-main #community-wrap .cSubmenu ul.submenu li a:hover {text-decoration:underline;}
+body #rt-main #community-wrap .cSubmenu {border:0px;}
+body #rt-main #community-wrap .cSubmenu {background:url("../images/menus/style1/menutop-bg.png") repeat scroll 50% 0 #000000 !important;}
+body #rt-main #community-wrap .cSubmenu ul.submenu li a  {color:#fff !important;border-right:1px solid #CCCCCC;}
+
+/* Collapsing bars */
+body #rt-main #community-wrap .app-box-menu-icon {height:15px;width:15px;}
+body #rt-main #community-wrap .app-box-menu-icon {background-image:url("../images/body/style1/controls.png");}
+body.cssstyle-style8 #rt-main #community-wrap .app-box-menu-icon {background-image:url("../images/body/style8/controls.png");}
+body #rt-main #community-wrap .app-box-header {border-bottom:2px solid #CCCCCC;background:none !important;}
+body #rt-main #community-wrap .app-box-title {text-shadow:none !important;color:inherit !important;font-size:210%;font-weight:normal;letter-spacing:normal;margin-top:0;padding:0;text-transform:lowercase;}
+body #rt-main #community-wrap .app-box-menu.toggle .app-box-menu-icon {background-position:0 0;}
+body #rt-main #community-wrap .app-box.collapse .app-box-menu.toggle .app-box-menu-icon {background-position:-15px 0;}
+body #rt-main #community-wrap .app-box-menu.options .app-box-menu-icon {height:17px;width:17px;}
+body #rt-main #community-wrap .app-box-menu.options .app-box-menu-icon {background:url("../images/body/style1/number-circle-sm.png") no-repeat scroll 50% 50% !important;}
+body.cssstyle-style7 #rt-main #community-wrap .app-box-menu.options .app-box-menu-icon {background:url("../images/body/style7/number-circle-sm.png") no-repeat scroll 50% 50% !important;}
+body.cssstyle-style8 #rt-main #community-wrap .app-box-menu.options .app-box-menu-icon {background:url("../images/body/style8/number-circle-sm.png") no-repeat scroll 50% 50% !important;}
+
+/* Right Modules */
+body #rt-main #community-wrap .cModule {border:0px solid #CCCCCC !important;}
+body #rt-main #community-wrap .cModule h3 {border-bottom:2px solid #CCCCCC !important;}
+body #rt-main #community-wrap .cModule {-moz-border-radius:0 0 0 0;margin-top:-2px !important; padding-top:0px !important;}
+
+/* News Feed*/
+body #rt-main #community-wrap div.ctitle {border-bottom:2px solid #CCCCCC !important;}
+body #rt-main #community-wrap .newsfeed-item {border-bottom:1px solid #CCCCCC !important;}
+
+/* Search */
+body #rt-main #community-wrap .cModule.searchbox .input_wrap {background:none !important; border:1px solid #CCCCCC;}
+body #rt-main #community-wrap .cModule.searchbox .input_wrap .search_button {background:url(../images/body/style1/search-icon.png) no-repeat !important;}
+body.cssstyle-style8 #rt-main #community-wrap .cModule.searchbox .input_wrap .search_button {background:url(../images/body/style8/search-icon.png) no-repeat !important;}
+body #rt-main #community-wrap .cModule.searchbox .input_wrap .search_button {height:14px;margin-top:6px;}
+
+/* Profile Page */
+body #rt-main #community-wrap .cModule h3 {text-shadow:none !important;color:inherit !important;font-size:210%;font-weight:normal;letter-spacing:normal;text-transform:lowercase;}
+body #rt-main #community-wrap #profile-header ul.actions a, #community-wrap #profile-header ul.actions a:hover {font-size:95% !important;}
+
+body #rt-main #community-wrap .group-menus {border-bottom:2px solid #666666 !important;}
+body #rt-main #community-wrap .group-menu a {color:#666666;background:#EEEEEE;}
+body #rt-main #community-wrap .group-menu.important a{background:#8B0000;color:#fff;}
+body #rt-main #community-wrap #community-admin-wrapper #community-admin-controls li {padding:2px 10px 2px 20px;}
+body #rt-main #community-wrap .button {border:none;height:17px;line-height:17px;padding:0 6px 0 54px;}
+body.cssstyle-style1 #rt-main #community-wrap .button {background:url("../images/body/style1/readon-bg.png") no-repeat;color:#fff;}
+body.cssstyle-style2 #rt-main #community-wrap .button {background:url("../images/body/style2/readon-bg.png") no-repeat;color:#fff;}
+body.cssstyle-style3 #rt-main #community-wrap .button {background:url("../images/body/style3/readon-bg.png") no-repeat;color:#fff;}
+body.cssstyle-style4 #rt-main #community-wrap .button {background:url("../images/body/style4/readon-bg.png") no-repeat;color:#fff;}
+body.cssstyle-style5 #rt-main #community-wrap .button {background:url("../images/body/style5/readon-bg.png") no-repeat;color:#fff;}
+body.cssstyle-style6 #rt-main #community-wrap .button {background:url("../images/body/style6/readon-bg.png") no-repeat;color:#fff;}
+body.cssstyle-style7 #rt-main #community-wrap .button {background:url("../images/body/style7/readon-bg.png") no-repeat;color:#fff;}
+body.cssstyle-style8 #rt-main #community-wrap .button {background:url("../images/body/style8/readon-bg.png") no-repeat;color:#fff;}
+
+/* Typo */
+body #rt-main #community-wrap a.add:link, body #rt-main #community-wrap a.add:visited {display:block !important;width:auto !important;}
+body #rt-main #community-wrap .infoGroupTitle {border-bottom:2px solid #CCCCCC !important;}
+body #rt-main #community-wrap .infoGroupTitle {text-shadow:none !important;color:inherit !important;font-size:210%;font-weight:normal;letter-spacing:normal;text-transform:lowercase;}
+body #community-wrap div.newsfeed-item div.newsfeed-content-hidden {background:#CCCCCC !important;}
+body #cWindowContent .blockUnregister ul#featurelist li {font-size:10px;line-height:12px;}
+
+body.cssstyle-style7 #rt-main #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li.toolbar-active div a, body.cssstyle-style7 #rt-main #community-wrap .app-box-header, body.cssstyle-style7 #rt-main #community-wrap .cModule h3, body.cssstyle-style7 #rt-main #community-wrap div.ctitle, body.cssstyle-style7 #rt-main #community-wrap .infoGroupTitle {border-bottom:2px solid #BAB8B2 !important;}
+body.cssstyle-style7 #rt-main #community-wrap .newsfeed-item {border-bottom:1px solid #BAB8B2 !important;}
+body.cssstyle-style7 #community-wrap div.greybox div, body.cssstyle-style7 #community-wrap div.greybox, body.cssstyle-style7 #community-wrap .photo-list-item .photo-item img, body.cssstyle-style7 #community-wrap .photo-list-item, body.cssstyle-style7 #community-wrap .album, body.cssstyle-style7 #community-wrap div.mini-profile, body.cssstyle-style7 #community-wrap #community-admin-wrapper, body.cssstyle-style7 #community-wrap div.profile-box, body.cssstyle-style7 #community-wrap #profile-new-status textarea#statustext, body.cssstyle-style7 #community-wrap #cFilterBar, body.cssstyle-style7 div.community-groups-results-item, body.cssstyle-style7 #community-wrap .app-item, body.cssstyle-style7 #community-wrap div.avatar img, body.cssstyle-style7 img.avatar, body.cssstyle-style7 #rt-main #community-wrap .cModule.searchbox .input_wrap {border:1px solid #BAB8B2;}
+body.cssstyle-style7 #rt-main #community-wrap .group-menus {border-bottom:2px solid #BAB8B2 !important;}
+body.cssstyle-style7 #community-wrap #profile-new-status textarea#statustext, body.cssstyle-style7 #rt-main #community-wrap .group-menu a {color:#222;background:#CFCBC8;}
+body.cssstyle-style7 #rt-main #community-wrap .group-menu.important a {background:#8B0000;color:#fff;}
+body.cssstyle-style7 #community-wrap div.newsfeed-item div.newsfeed-content-hidden {background:#CFCBC8 !important;}
+body.cssstyle-style7 #community-wrap #community-admin-wrapper, body.cssstyle-style7 .profile-toolbox-tl, body.cssstyle-style7 .profile-toolbox-br, body.cssstyle-style7 .profile-toolbox-bl {background: #CFCBC8 !important;}
+body.cssstyle-style7 #community-wrap .profile-avatar img {border: 5px solid #BAB8B2;}
+body.cssstyle-style7 #community-wrap div#profile-status {border-bottom: 1px dotted #BAB8B2;color: #444;}
+body.cssstyle-style7 #community-wrap div.greybox div div {background: none !important;}
+body.cssstyle-style7 #community-wrap div.greybox div div div {border: 0 !important;}
+
+body.cssstyle-style8 #rt-main #community-wrap #cToolbarNav.cToolbar ul#cToolbarNavList li.toolbar-active div a, body.cssstyle-style8 #rt-main #community-wrap .app-box-header, body.cssstyle-style8 #rt-main #community-wrap .cModule h3, body.cssstyle-style8 #rt-main #community-wrap div.ctitle, body.cssstyle-style8 #rt-main #community-wrap .infoGroupTitle {border-bottom:2px solid #444 !important;}
+body.cssstyle-style8 #rt-main #community-wrap .newsfeed-item {border-bottom:1px solid #444 !important;}
+body.cssstyle-style8 #community-wrap div.greybox div, body.cssstyle-style8 #community-wrap div.greybox, body.cssstyle-style8 #community-wrap .photo-list-item .photo-item img, body.cssstyle-style8 #community-wrap .photo-list-item, body.cssstyle-style8 #community-wrap .album, body.cssstyle-style8 #community-wrap div.mini-profile, body.cssstyle-style8 #community-wrap #community-admin-wrapper, body.cssstyle-style8 #community-wrap div.profile-box, body.cssstyle-style8 #community-wrap #profile-new-status textarea#statustext, body.cssstyle-style8 #community-wrap #cFilterBar, body.cssstyle-style8 div.community-groups-results-item, body.cssstyle-style8 #community-wrap .app-item, body.cssstyle-style8 #community-wrap div.avatar img, body.cssstyle-style8 img.avatar, body.cssstyle-style8 #rt-main #community-wrap .cModule.searchbox .input_wrap {border:1px solid #444;}
+body.cssstyle-style8 #rt-main #community-wrap .group-menus {border-bottom:2px solid #666666 !important;}
+body.cssstyle-style8 #community-wrap #profile-new-status textarea#statustext, body.cssstyle-style8 #rt-main #community-wrap .group-menu a {color:#fff;background:#292929;}
+body.cssstyle-style8 #rt-main #community-wrap .group-menu.important a {background:#8B0000;color:#fff;}
+body.cssstyle-style8 #community-wrap div.newsfeed-item div.newsfeed-content-hidden {background:#444 !important;}
+body.cssstyle-style8 #community-wrap #community-admin-wrapper, body.cssstyle-style8 .profile-toolbox-tl, body.cssstyle-style8 .profile-toolbox-br, body.cssstyle-style8 .profile-toolbox-bl {background: #292929 !important;}
+body.cssstyle-style8 #community-wrap .profile-avatar img {border: 5px solid #444;}
+body.cssstyle-style8 #community-wrap div#profile-status {border-bottom: 1px dotted #444;color: #999;}
+body.cssstyle-style8 #community-wrap dl.profile-right-info dd {color: #fff;}
+body.cssstyle-style8 #community-wrap div.greybox div div {background: none !important;}
+body.cssstyle-style8 #community-wrap div.greybox div div div {border: 0 !important;}
+
+/* Jom Social 1.8.0 Overrides */
+/* Group */
+#community-wrap #community-group-action, #community-wrap #community-event-action {background:none !important;}
+
+
+/* K2 Overrides */
+/* K2 Modules */
+.k2ItemsBlock .even, .k2ItemsBlock .odd {background:none;}
+div.k2ItemsBlock ul li img.moduleItemAuthorAvatar {margin:6px 4px 0 0;}
+.k2LatestCommentsBlock .even, .k2LatestCommentsBlock .odd {background:none;}
+div.itemListCategory, div#itemListLinks {background:none;}
+div.subCategory {background:none;}
+
+/* General */
+body.cssstyle-style1 div.itemListCategory, body.cssstyle-style1 div.subCategory, body.cssstyle-style1 div#itemListLinks, body.cssstyle-style2 div.itemListCategory, body.cssstyle-style2 div.subCategory, body.cssstyle-style2 div#itemListLinks, body.cssstyle-style3 div.itemListCategory, body.cssstyle-style3 div.subCategory, body.cssstyle-style3 div#itemListLinks, body.cssstyle-style4 div.itemListCategory, body.cssstyle-style4 div.subCategory, body.cssstyle-style4 div#itemListLinks, body.cssstyle-style5 div.itemListCategory, body.cssstyle-style5 div.subCategory, body.cssstyle-style5 div#itemListLinks, body.cssstyle-style6 div.itemListCategory, body.cssstyle-style6 div.subCategory, body.cssstyle-style6 div#itemListLinks {border:0px;background:url(../images/body/style1/horiz-grad.png) repeat-x;}
+body.cssstyle-style7 div.itemListCategory, body.cssstyle-style7 div.subCategory, body.cssstyle-style7 div#itemListLinks {border:0px;background:url(../images/body/style7/horiz-grad.png) repeat-x;}
+body.cssstyle-style8 div.itemListCategory, body.cssstyle-style8 div.subCategory, body.cssstyle-style8 div#itemListLinks {border:0px;background:url(../images/body/style8/horiz-grad.png) repeat-x;}
+
+.itemListSubCategories h3 {border-bottom:2px solid #CCCCCC;}
+
+div.itemContainer {margin-bottom:50px;}
+
+#k2Container .itemAuthorLatest ul, #k2Container .itemRelated ul {list-style:none;padding:0px;}
+#k2Container .itemAuthorLatest ul li ,#k2Container .itemRelated ul li {padding-left:10px;}
+div.itemNavigation {border:0px;}
+div.catItemView {margin-top:50px;margin:2px;}
+
+.k2Pagination .tab,.k2Pagination .page-block {display:inline-block;margin:0px 10px;}
+
+body.cssstyle-style1 .itemListView div.catItemView,body.cssstyle-style2 .itemListView div.catItemView, body.cssstyle-style3 .itemListView div.catItemView, body.cssstyle-style4 .itemListView div.catItemView, body.cssstyle-style5 .itemListView div.catItemView, body.cssstyle-style6 .itemListView div.catItemView {background:url(../images/body/style1/horiz-grad.png) repeat-x;}
+body.cssstyle-style7 .itemListView div.catItemView {background:url(../images/body/style7/horiz-grad.png) repeat-x;}
+body.cssstyle-style8 .itemListView div.catItemView {background:url(../images/body/style8/horiz-grad.png) repeat-x;}
+div.itemContainer  {border-bottom:1px dotted #CCCCCC;}
+div.itemNavigation {background:#f9f9f9;}
+#k2Container .even {background:#f9f9f9;}
+#k2Container .odd {background:#f3f3f3;}
+
+/* K2 Article */
+div.itemToolbar{background:none;}
+div.itemAuthorBlock{background:none;}
+div.itemComments{background:none;}
+div.itemComments ul.itemCommentsList .even {background:none;}
+div.itemComments ul.itemCommentsList .odd {background:none;}
+div.itemHeader span.itemDateCreated{display:block;}
+div.userBlock,div.userItemCategory,div.userItemTagsBlock {border:0px;}
+div.userItemView {margin-bottom:50px;}
+
+div.userItemView {border-bottom:1px dotted #CCCCCC;}
+body.cssstyle-style1 div.userBlock, body.cssstyle-style2 div.userBlock, body.cssstyle-style3 div.userBlock, body.cssstyle-style4 div.userBlock, bodyy.cssstyle-style5 div.userBlock, body.cssstyle-style6 div.userBlock {background:url(../images/body/style1/horiz-grad.png) repeat-x;}
+body.cssstyle-style7 div.userBlock {background:url(../images/body/style7/horiz-grad.png) repeat-x;}
+body.cssstyle-style8 div.userBlock {background:url(../images/body/style8/horiz-grad.png) repeat-x;}
+div.userBlock img {border:1px solid #CCCCCC;}
+div.userBlock p.userAdditionalInfo {border:1px dotted #CCCCCC;}
+div.userItemCategory {background:#f9f9f9;}
+div.catItemHeader h3.catItemTitle {border-bottom:2px solid #cccccc;}
+div.catItemTagsBlock, div.catItemCategory, div.itemHitsTwitter {border-bottom:1px solid #CCCCCC;}
+div.itemCategory {border-bottom:0px;background:#f9f9f9;}
+div.itemTagsBlock {border-bottom:0px;}
+div.itemSocialLinksBlock {border-bottom:1px solid #CCCCCC;background:none repeat scroll 0 0 #F9F9F9}
+body.cssstyle-style1 div.itemAuthorBlock, body.cssstyle-style2 div.itemAuthorBlock, body.cssstyle-style3 div.itemAuthorBlock, body.cssstyle-style4 div.itemAuthorBlock, body.cssstyle-style5 div.itemAuthorBlock, body.cssstyle-style6 div.itemAuthorBlock {border:0px;background:url(../images/body/style1/horiz-grad.png) repeat-x;}
+body.cssstyle-style7 div.itemAuthorBlock {border:0px;background:url(../images/body/style7/horiz-grad.png) repeat-x;}
+body.cssstyle-style8 div.itemAuthorBlock {border:0px;background:url(../images/body/style8/horiz-grad.png) repeat-x;}
+div.itemAuthorBlock img.itemAuthorAvatar, div.itemComments, span.itemImage img {border:1px solid #CCCCCC;}
+.itemAuthorLatest h3, div.itemHeader h2.itemTitle, span.catItemImage img, div.itemHeader h2.itemTitle {border-bottom:2px solid #CCCCCC;}
+
+body.cssstyle-style7 #k2Container .odd {background: #E9E6DF;}
+body.cssstyle-style7 div.subCategory a.subCategoryImage img, body.cssstyle-style7 div.subCategory a.subCategoryImage:hover img, body.cssstyle-style7 div.itemListCategory img, body.cssstyle-style7 div.itemAuthorBlock img.itemAuthorAvatar, body.cssstyle-style7 div.itemNavigation, body.cssstyle-style7 #k2Container .even, body.cssstyle-style7 div.userItemCategory, body.cssstyle-style7 div.itemCategory, body.cssstyle-style7 div.itemSocialLinksBlock, body.cssstyle-style7 div.userBlock img, body.cssstyle-style7 div.k2LatestCommentsBlock ul li img.lcAvatar  {background: #CFCBC8}
+body.cssstyle-style7 div.itemToolbar {border-top:1px dotted #BAB8B2;}
+body.cssstyle-style7 div.genericItemView, body.cssstyle-style7 div.itemView, body.cssstyle-style7 #k2Container .odd, body.cssstyle-style7 #k2Container .even, body.cssstyle-style7 div.itemToolbar, body.cssstyle-style7 div.itemContainer, body.cssstyle-style7 div.userItemView {border-bottom:1px dotted #BAB8B2;}
+body.cssstyle-style7 div.userBlock p.userAdditionalInfo {border:1px dotted #BAB8B2;}
+body.cssstyle-style7 div.catItemHeader h3.catItemTitle {border-bottom:2px solid #BAB8B2;}
+body.cssstyle-style7 div.catItemTagsBlock, body.cssstyle-style7 div.catItemCategory, body.cssstyle-style7 div.itemHitsTwitter, body.cssstyle-style7 div.itemSocialLinksBlock {border-bottom:1px solid #BAB8B2;}
+body.cssstyle-style7 div.subCategory a.subCategoryImage img, body.cssstyle-style7 div.subCategory a.subCategoryImage:hover img, body.cssstyle-style7 div.itemListCategory img, body.cssstyle-style7 span.genericItemImage img, body.cssstyle-style7 div.userBlock img, body.cssstyle-style7 div.itemAuthorBlock img.itemAuthorAvatar, body.cssstyle-style7 div.itemComments, body.cssstyle-style7 span.itemImage img, body.cssstyle-style7 span.catItemImage img, body.cssstyle-style7 span.userItemImage img, body.cssstyle-style7 div.k2LatestCommentsBlock ul li img.lcAvatar {border:1px solid #BAB8B2;}
+body.cssstyle-style7 .itemListSubCategories h3, body.cssstyle-style7 .itemAuthorLatest h3, body.cssstyle-style7 div.itemHeader h2.itemTitle, body.cssstyle-style7 span.catItemImage img, body.cssstyle-style7 div.itemHeader h2.itemTitle {border-bottom:2px solid #BAB8B2;}
+
+body.cssstyle-style8 #k2Container .odd {background: #292929;}
+body.cssstyle-style8 div.subCategory a.subCategoryImage img, body.cssstyle-style8 div.subCategory a.subCategoryImage:hover img, body.cssstyle-style8 div.itemListCategory img, body.cssstyle-style8 div.itemAuthorBlock img.itemAuthorAvatar, body.cssstyle-style8 div.itemNavigation, body.cssstyle-style8 #k2Container .even, body.cssstyle-style8 div.userItemCategory, body.cssstyle-style8 div.itemCategory, body.cssstyle-style8 div.itemSocialLinksBlock, body.cssstyle-style8 div.userBlock img, body.cssstyle-style8 div.k2LatestCommentsBlock ul li img.lcAvatar {background: #333333}
+body.cssstyle-style8 div.itemToolbar {border-top:1px dotted #444444;}
+body.cssstyle-style8 div.genericItemView, body.cssstyle-style8 div.itemView, body.cssstyle-style8 #k2Container .odd, body.cssstyle-style8 #k2Container .even, body.cssstyle-style8 div.itemToolbar, body.cssstyle-style8 div.itemContainer, body.cssstyle-style8 div.userItemView {border-bottom:1px dotted #444444;}
+body.cssstyle-style8 div.userBlock p.userAdditionalInfo {border:1px dotted #444444;}
+body.cssstyle-style8 div.catItemHeader h3.catItemTitle {border-bottom:2px solid #444444;}
+body.cssstyle-style8 div.catItemTagsBlock, body.cssstyle-style8 div.catItemCategory, body.cssstyle-style8 div.itemHitsTwitter, body.cssstyle-style8 div.itemSocialLinksBlock {border-bottom:1px solid #444444;}
+body.cssstyle-style8 div.subCategory a.subCategoryImage img, body.cssstyle-style8 div.subCategory a.subCategoryImage:hover img, body.cssstyle-style8 div.itemListCategory img, body.cssstyle-style8 span.genericItemImage img, body.cssstyle-style8 div.userBlock img, body.cssstyle-style8 div.itemAuthorBlock img.itemAuthorAvatar, body.cssstyle-style8 div.itemComments, body.cssstyle-style8 span.itemImage img, body.cssstyle-style8 span.catItemImage img, body.cssstyle-style8 span.userItemImage img, body.cssstyle-style8 div.k2LatestCommentsBlock ul li img.lcAvatar {border:1px solid #444444;}
+body.cssstyle-style8 .itemListSubCategories h3, body.cssstyle-style8 .itemAuthorLatest h3, body.cssstyle-style8 div.itemHeader h2.itemTitle, body.cssstyle-style8 span.catItemImage img, body.cssstyle-style8 div.itemHeader h2.itemTitle {border-bottom:2px solid #444444;}
+body.cssstyle-style8 div.catItemTagsBlock span, body.cssstyle-style8 div.catItemCategory span, body.cssstyle-style8 div.itemTagsBlock span, body.cssstyle-style8 div.itemCategory span, body.cssstyle-style8 div.itemSocialLinksBlock span, body.cssstyle-style8 div.userItemCategory span, body.cssstyle-style8 div.userItemTagsBlock span, body.cssstyle-style8 div.genericItemCategory span {color: #ccc;}
+
+/* K2 Images */
+div.itemToolbar ul li a#fontIncrease img {background:url(../images/icons/icon-add.png) no-repeat;height:16px;width:16px;}
+div.itemToolbar ul li a#fontDecrease img {background:url(../images/icons/icon-minus.png) no-repeat;height:16px;width:16px;}
+
+/* K2 Typo */
+div.itemCommentsForm form input.button {border:none;height:17px;line-height:17px;padding:0 6px 0 54px;}
+body.cssstyle-style1 div.itemCommentsForm form input.button {background:url("../images/body/style1/readon-bg.png") no-repeat;color:#fff;}
+body.cssstyle-style2 div.itemCommentsForm form input.button {background:url("../images/body/style2/readon-bg.png") no-repeat;color:#fff;}
+body.cssstyle-style3 div.itemCommentsForm form input.button {background:url("../images/body/style3/readon-bg.png") no-repeat;color:#fff;}
+body.cssstyle-style4 div.itemCommentsForm form input.button {background:url("../images/body/style4/readon-bg.png") no-repeat;color:#fff;}
+body.cssstyle-style5 div.itemCommentsForm form input.button {background:url("../images/body/style5/readon-bg.png") no-repeat;color:#fff;}
+body.cssstyle-style6 div.itemCommentsForm form input.button {background:url("../images/body/style6/readon-bg.png") no-repeat;color:#fff;}
+body.cssstyle-style7 div.itemCommentsForm form input.button {background:url("../images/body/style7/readon-bg.png") no-repeat;color:#fff;}
+body.cssstyle-style8 div.itemCommentsForm form input.button {background:url("../images/body/style8/readon-bg.png") no-repeat;color:#fff;}
+
+/* Virtuemart 1.1.4 */
+/* Virtuemart Modules */
+
+/* Main Component */
+/* Categories */
+#vmMainPage h3 a {float:right;margin:5px 0 0 5px;}
+#vmMainPage .buttons_heading  {margin:0 0 0 3px;}
+#vmMainPage .buttons_heading a {float:left;}
+
+/* Products */
+.vmCartContainer {background:none;}
+
+/* Fabrik */
+
+/* Jcomment */
+#comments-form .btn, #comments-report-form .btn, #comments-form .btn div, #comments-report-form .btn div {background:none;}
+#comments-form .btn a, #comments-report-form .btn a {border:none;height:17px;line-height:17px;padding:0 6px 0 54px;font-weight:normal;display:block;}
+#comments-form .btn a, #comments-report-form .btn a {background:url("../images/body/style1/readon-bg.png") no-repeat;color:#fff;}
+body.cssstyle-style8 #comments-form .btn a, body.cssstyle-style8 #comments-report-form .btn a {background:url("../images/body/style8/readon-bg.png") no-repeat;color:#fff;}
+
+#jc .rbox_tr, #jc .rbox_tl, #jc .rbox_t {background:none;border:0px;}
+#jc .rbox_br, #jc .rbox_bl, #jc .rbox_b {background:none;border:0px;}
+#jc .rbox_m  {background:none;border:0px;}
+#comments-form label, #comments-report-form label  {padding-left:15px;}
+#jc .rbox div {line-height:140%;}
+
+body.cssstyle-style1 #comments .toolbar  {border-top:1px solid #cccccc;}
+
+#jc .rbox {border:0px;}
+
+#jc .even .rbox {background:#f9f9f9;}
+#jc .odd .rbox {background:#f3f3f3;}
+body.cssstyle-style8 #jc .even .rbox {background:#292929;}
+body.cssstyle-style8 #jc .odd .rbox {background:#333;}
+
+#comments-form p {margin-left:0px !important;}
+#comments .comments-list {margin-left:0px !important;}
+#comments-list-footer {margin: 0px 0px 10px 0px !important;}
+
+#jc h4 {font-size:210%;font-weight:normal;letter-spacing:normal;margin-top:0;padding:0;text-transform:lowercase;}
+
+#jc h4{border-bottom:2px solid #cccccc;}
+body.cssstyle-style7 #jc h4{border-bottom:2px solid #BAB8B2;}
+body.cssstyle-style8 #jc h4{border-bottom:2px solid #444;}
+
+#comments-footer  {border-top:2px solid #cccccc;}
+body.cssstyle-style7 #comments-footer  {border-top:2px solid #BAB8B2;}
+body.cssstyle-style8 #comments-footer  {border-top:2px solid #444;}
+
+body.cssstyle-style8 #comments-form input, body.cssstyle-style8 #comments-report-form input, body.cssstyle-style8 #comments-form textarea {background: none;border: 1px solid #444;}
+body.cssstyle-style8 #comments-form .grippie {background-color: #292929;border-color: #444;}
+body.cssstyle-style8 #comments .comment-author, body.cssstyle-style8 #comments .author-homepage {color: inherit;}
+
+/* Rok Modules */
+
+/* Rokquickcart */
+.cart_buttons {text-align:right;}
+.simpleCart_shelfItem {background:none;}
+.cart_product_grad,.cart_product_sur3,.cart_product_sur4 {background:none;}
+.cart_yourcart,.cart_grad,.cart_sur1 ,.cart_sur2,.cart_sur3,.cart_sur4 {background:none;}
+.cart_padding {padding:10px 10px 25px;}
+.simpleCart_shelfItem {margin:0 20px 0 0;}
+.cart_padding,.cart_yourcart_items {border:0px;}
+.cart_yourcart_items {background:url(../images/body/style1/horiz-grad.png) repeat-x;}
+body.cssstyle-style7 .cart_yourcart_items {background:url(../images/body/style7/horiz-grad.png) repeat-x;}
+body.cssstyle-style8 .cart_yourcart_items {background:url(../images/body/style8/horiz-grad.png) repeat-x;}
+.cart_product_add .item_add, .cart_product_add .item_add:link, .cart_product_add .item_add:visited, .simpleCart_checkout, .simpleCart_empty, .simpleCart_checkout:hover, .simpleCart_empty:hover, .simpleCart_checkout:visited, .simpleCart_empty:visited, .simpleCart_checkout:link, .simpleCart_empty:link {background:none;height:auto;float:none;padding:0;margin:0;display:inline-block;}
+.cart_product_add .item_add span, .simpleCart_checkout span, .simpleCart_empty span {width:auto;margin-left:0;position:relative;}
+body.cssstyle-style8 .simpleCart_finalTotal {color:#fff;}
+.cart_quickcart .attention {border-top: 0;}
+
+.cssstyle-style8 .cart_statusicon {background:url(../images/cart-dark.gif) no-repeat;}
+
+
+/* RokDownloads */
+#rokdownloads .rd_pagination .tab,#rokdownloads .rd_pagination .page-block {display:inline-block;margin:0px 10px;}

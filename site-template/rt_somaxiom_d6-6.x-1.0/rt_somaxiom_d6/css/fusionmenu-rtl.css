@@ -1,0 +1,27 @@
+/**
+ * @package   Somaxiom Template - RocketTheme
+ * @version   1.5.3 April 20, 2011
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2011 RocketTheme, LLC
+ * @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+ */
+ 
+/* Root Items */
+body.rtl .menutop li.root {float: right;margin: 0 0 0 5px;}
+body.rtl .menutop li.parent.root .item span {padding: 0 12px 0 16px;}
+body.rtl .menutop li.root > .item img {float: right;margin: 0 0 0 5px;}
+body.rtl .menutop li.root > .image span {padding-right: 0 !important;}
+
+/* Dropdown Items */
+body.rtl .menutop ul li {margin-left: 0;margin-right: 2px;float: right;}
+body.rtl .menutop ul.columns2 li {float: right;margin-left: 0;margin-right: 2px;}
+body.rtl .menutop ul li > .bullet {padding-left: 0;padding-right: 10px;}
+body.rtl .menutop ul li > .bullet:hover, body.rtl .menutop ul li.active > .bullet, body.rtl .menutop ul li.f-menuparent-itemfocus .item {padding-left: 0;padding-right: 6px;}
+body.rtl .menutop ul li > .item img {float: right;margin: -2px 10px 8px 8px;}
+body.rtl .menutop ul li > .bullet:hover, body.rtl .menutop li.f-menuparent-itemfocus .item {border-left: none;}
+body.rtl .menutop ul li.active > .bullet {border-left: none;}
+
+/* No JS */
+body.rtl .menutop li.root:hover > .fusion-submenu-wrapper {left:minherit;right: -26px;}
+body.rtl .menutop ul.columns1 li:hover > .fusion-submenu-wrapper {right:180px;left: inherit;}
+body.rtl .menutop ul.columns2 li:hover > .fusion-submenu-wrapper {right:178px;left: inherit;}

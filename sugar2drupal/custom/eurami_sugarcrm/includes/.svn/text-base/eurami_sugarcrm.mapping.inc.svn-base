@@ -1,0 +1,74 @@
+<?php
+function _eurami_sugarcrm_mapping() {
+  $mapping = array();
+  
+  /**
+   *   -----------------------------
+   *   | Drupal      | SugarCRM    |
+   *   -----------------------------
+   *   | profile     = contact     |
+   *   -----------------------------
+   */
+  $mapping['profile'] = array(
+    'mail' => 'email1',
+    'profile_salutation' => 'salutation',
+    'profile_first_name' => 'first_name',
+    'profile_last_name' => 'last_name',
+    'profile_title' => 'title',
+    'profile_department' => 'department',
+    'profile_birthdate' => 'birthdate',
+    'profile_telephone' => 'phone_work',
+    'profile_mobile' => 'phone_mobile',
+    'profile_fax' => 'phone_fax',
+    //'profile_company' => '',
+    'profile_primary_address_street' => 'primary_address_street',
+    'profile_primary_address_city' => 'primary_address_city',
+    'profile_primary_address_postal_code' => 'primary_address_postalcode',
+    'profile_primary_address_state' => 'primary_address_state',
+    'profile_primary_address_country' => 'primary_address_country',
+    'profile_other_address_street' => 'alt_address_street',
+    'profile_other_address_city' => 'alt_address_city',
+    'profile_other_address_postal_code' => 'alt_address_postalcode',
+    'profile_other_address_state' => 'alt_address_state',
+    'profile_other_address_country' => 'alt_address_country',
+    //'profile_socmed_type' => '',
+    //'profile_socmed_url' => '',
+  );
+  
+  
+  /**
+   *   -----------------------------
+   *   | Drupal      | SugarCRM    |
+   *   -----------------------------
+   *   | company     = account     |
+   *   -----------------------------
+   */
+  $mapping['company'] = array(
+    //array('', ''),
+    //array('', ''),
+    //array('', ''),
+    //array('', ''),
+    //array('', ''),
+    //array('', ''),
+    //array('', ''),
+    //array('', ''),
+    //array('', ''),
+    //array('', ''),
+    //array('', ''),
+    //array('', ''),
+    //array('', ''),
+    //array('', ''),
+    //array('', ''),
+    //array('', ''),
+    //array('', ''),
+    //array('', ''),
+    //array('', ''),
+    //array('', ''),
+    //array('', ''),
+    //array('', ''),
+    //array('', ''),
+  );
+  
+  
+  return $mapping;
+}

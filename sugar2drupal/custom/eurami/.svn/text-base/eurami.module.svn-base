@@ -1,0 +1,78 @@
+<?php
+
+/**
+ * Implementation of hook_menu().
+ */
+function eurami_menu() {
+  $items = array();
+
+  $items['admin/eurami'] = array(
+    'title' => 'Eurami',
+    'description' => 'Eurami customization settings',
+    'position' => 'right',
+    'weight' => -5,
+    'page callback' => 'eurami_admin_menu_block_page',
+    'access arguments' => array('access administration pages'),
+  );
+
+  $items['admin/eurami/settings'] = array(
+    'title' => 'General settings',
+    'description' => 'Set general parameters that are specific to the Eurami project',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('eurami_settings'),
+    'access arguments' => array('access administration pages'),
+    'type' => MENU_NORMAL_ITEM,
+    'weight' => 1,
+    'file' => 'includes/eurami.admin.inc',
+  );
+  
+  return $items;
+}
+
+function eurami_admin_menu_block_page() {
+  $item = menu_get_item();
+  if ($content = system_admin_menu_block($item)) {
+    $output = theme('admin_block_content', $content);
+  }
+  else {
+    $output = t('You do not have any administrative items.');
+  }
+  return $output;
+}
+
+
+/**
+ * Implementation of hook_nodeapi().
+ */
+function eurami_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
+  if ($node->type == 'accreditation') {
+    switch ($op) {
+      case 'presave':
+        $current_survey_nid = variable_get('accr_survey_nid', '');
+        
+        // set field here
+        break;
+    }
+  }
+}
+
+
+/**
+ * Implementation of hook_form_alter().
+ */
+
+function eurami_form_alter(&$form, $form_state, $form_id) {
+  switch($form_id) {
+    case 'comment_form':
+      foreach ($form['comment_filter']['format'] as $i => $filter) {
+        if (is_int($i) && !$filter['#type']) {
+          $form['comment_filter']['format'][$i]['#value'] = '';
+          $form['comment_filter']['format'] = '';
+          unset($form['preview']);
+          unset($form['_author']);
+        }
+      }
+      break;
+  }
+}
+

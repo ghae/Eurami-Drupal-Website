@@ -1,0 +1,54 @@
+/**
+ * @package   Somaxiom Template - RocketTheme
+ * @version   1.5.3 April 20, 2011
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2011 RocketTheme, LLC
+ * @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+ */
+
+/* Top Menu */
+body.rtl .menutop li.parent.root > .item span, .menu-type-splitmenu.rtl .menutop li.parent .item span {background: url(../images/menus/style2/menutop-daddy.png) 4px 50% no-repeat;}
+
+/* Splitmenu Submenu */
+body.rtl #rt-subnavigation ul.menu li.parent > .item span {background: url(../images/menus/style2/menutop-daddy.png) 4px 50% no-repeat;}
+
+/* FusionMenu Dropdown */
+body.rtl .menutop ul li > .daddy span {background: url(../images/menus/style2/rtl/dropdown-daddy.png) 0 50% no-repeat;}
+body.rtl .menutop ul li > .bullet:hover, body.rtl .menutop li.f-menuparent-itemfocus .item {border-right: 4px solid #F1E5D2;}
+body.rtl .menutop ul li.active > .bullet {border-right: 4px solid #A76E40;}
+
+/* Module Variations */
+body.rtl .tab1 .module-title {background: url(../images/body/style2/rtl/module-tab-r.png) 0 0 no-repeat;}
+body.rtl .tab1 .module-title .title {background: url(../images/body/style2/rtl/module-tab-l.png) 100% 0 no-repeat;}
+body.rtl .tab2 .module-title {background: url(../images/body/style2/rtl/module-tab-r.png) 0 -104px no-repeat;}
+body.rtl .tab2 .module-title .title {background: url(../images/body/style2/rtl/module-tab-l.png) 100% -104px no-repeat;}
+body.rtl .tab3 .module-title {background: url(../images/body/style2/rtl/module-tab-r.png) 0 -208px no-repeat;}
+body.rtl .tab3 .module-title .title {background: url(../images/body/style2/rtl/module-tab-l.png) 100% -208px no-repeat;}
+
+/* Side Menu */
+body.rtl .module-content ul.menu a, body.rtl .module-content ul.menu .separator, body.rtl .module-content ul.menu .item {background: url(../images/body/style2/dot-border.png) 100% 9px no-repeat;}
+
+/* Login Form - Circles */
+.bodystyle-circles.col12.rtl .rt-grid-3 .login {background: url(../images/body/style2/rtl/grid3-login-bg.png) 0 0 no-repeat;}
+.bodystyle-circles.col12.rtl .rt-grid-4 .login {background: url(../images/body/style2/rtl/grid4-login-bg.png) 0 0 no-repeat;}
+.bodystyle-circles.col12.rtl .rt-grid-5 .login, .bodystyle-circles.col12.rtl .rt-grid-6 .login, .bodystyle-circles.col12.rtl .rt-grid-7 .login, .bodystyle-circles.col12.rtl .rt-grid-8 .login, .bodystyle-circles.col12.rtl .rt-grid-9 .login, .bodystyle-circles.col12.rtl .rt-grid-10 .login, .bodystyle-circles.col12.rtl .rt-grid-11 .login, .bodystyle-circles.col12.rtl .rt-grid-12 .login {background: url(../images/body/style2/rtl/grid5-login-bg.png) 0 0 no-repeat;}
+
+/* Login Form - Squares */
+.bodystyle-squares.col12.rtl .rt-grid-3 .login {background: url(../images/body/style2/rtl/grid3-login-bg-square.png) 0 0 no-repeat;}
+.bodystyle-squares.col12.rtl .rt-grid-4 .login {background: url(../images/body/style2/rtl/grid4-login-bg-square.png) 0 0 no-repeat;}
+.bodystyle-squares.col12.rtl .rt-grid-5 .login, .bodystyle-squares.col12.rtl .rt-grid-6 .login, .bodystyle-squares.col12.rtl .rt-grid-7 .login, .bodystyle-squares.col12.rtl .rt-grid-8 .login, .bodystyle-squares.col12.rtl .rt-grid-9 .login, .bodystyle-squares.col12.rtl .rt-grid-10 .login, .bodystyle-squares.col12.rtl .rt-grid-11 .login, .bodystyle-squares.col12.rtl .rt-grid-12 .login {background: url(../images/body/style2/rtl/grid5-login-bg-square.png) 0 0 no-repeat;}
+
+/* Typography */
+body.rtl .readon span, body.rtl .readon-wrap1 .readon1-r, body.rtl .login .readon .button {background: url(../images/body/style2/rtl/readon-bg.png) 100% 0 no-repeat;}
+body.rtl .readon .button {background: url(../images/body/style2/rtl/readon-bg2.png) 100% 0 no-repeat;}
+body.rtl ul.bullet-a li, body.rtl #form-login ul li a, body.rtl #com-form-login ul li a, body.rtl ul.rt-more-articles li a, body.rtl .rt-section-list ul li a, body.rtl ul.mostread li a, body.rtl ul.latestnews li a, body.rtl .weblinks ul li a {background-image: url(../images/body/style2/rtl/body-arrow.png);}
+
+/* Breadcrumbs */
+body.rtl span.breadcrumbs img {background: url(../images/body/style2/rtl/body-arrow.png) 100% 50% no-repeat;}
+
+/* RokStories */
+.bodystyle-circles.rtl .rokstories-layout5 .image-mask {background: url(../images/body/style2/rtl/rokstories-mask-circle.png) 100% 0 no-repeat;}
+.bodystyle-squares.rtl .rokstories-layout5 .image-mask {background: url(../images/body/style2/rtl/rokstories-mask-square.png) 100% 0 no-repeat;}
+
+/* Custom Content */
+body.rtl .rokstories-demo-surround {background: url(../images/body/style2/rtl/rokstories-arrow.png) 90% 120px no-repeat;}

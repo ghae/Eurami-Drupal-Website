@@ -1,0 +1,22 @@
+/**
+ * @package   Somaxiom Template - RocketTheme
+ * @version   1.5.3 April 20, 2011
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2011 RocketTheme, LLC
+ * @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+ */
+ 
+.module-title .title br {display: none;}
+
+/* Side Menu */
+.module-content ul.menu a, .module-content ul.menu .separator, .module-content ul.menu .item {display: inline-block;vertical-align: middle;text-indent: 0;}
+
+/* Typography */
+.readon span, body .feature-block .readon-main .readon1-r {line-height: 19px;height: 19px;}
+.readon .button {padding-bottom: 3px;}
+
+/* RTL */
+body.rtl .tab1 .module-title-surround, body.rtl .tab2 .module-title-surround, body.rtl .tab3 .module-title-surround {margin-right: 5px !important;}
+body.rtl .rokradios, body.rtl .rokradios-active, body.rtl .rokchecks, body.rtl .rokchecks-active {display: inline-block;}
+body.rtl .rt-pollrow .rokradios, body.rtl .rt-pollrow .rokradios-active, body.rtl .rt-pollrow .rokchecks, body.rtl .rt-pollrow .rokchecks-active {margin-right: 2px;}
+body.rtl #form-login ul, body.rtl #com-form-login ul, body.rtl ul.rt-more-articles, body.rtl .rt-section-list ul {direction: ltr;text-align: right;}

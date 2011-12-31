@@ -1,0 +1,4 @@
+name = Eurami customizations
+description = Eurami customizations
+core = 6.x
+package = Eurami

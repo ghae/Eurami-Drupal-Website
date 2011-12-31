@@ -1,0 +1,4 @@
+name = Profile
+description = Enables a new, customized user profile
+core = 6.x
+package = Eurami

@@ -1,0 +1,4 @@
+name = SugarCRM Integration
+description = Integrates Drupal with SugarCRM.
+core = 6.x
+package = Eurami

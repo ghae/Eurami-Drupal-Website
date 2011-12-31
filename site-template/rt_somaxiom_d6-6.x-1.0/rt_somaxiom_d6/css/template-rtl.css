@@ -1,0 +1,84 @@
+/**
+ * @package   Somaxiom Template - RocketTheme
+ * @version   1.5.3 April 20, 2011
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2011 RocketTheme, LLC
+ * @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+ */
+
+/* Menu Dropdowns */
+body.rtl .menutop ul, body.rtl .menutop ul.columns2 {float: right;}
+
+/* Module Variations */
+body.rtl .tab1 .module-title-surround, body.rtl .tab2 .module-title-surround, body.rtl .tab3 .module-title-surround {margin-left: 0;margin-right: -5px;}
+body.rtl .tab1 .module-title, body.rtl .tab2 .module-title, body.rtl .tab3 .module-title {margin-left: 0;margin-right: 11px;}
+body.rtl .tab1 .module-title .title, body.rtl .tab2 .module-title .title, body.rtl .tab3 .module-title .title {padding: 0 15px 0 20px;margin-left: 0;margin-right: -11px;}
+
+/* Side Menus */
+body.rtl .module-content ul.menu a, body.rtl .module-content ul.menu .separator, body.rtl .module-content ul.menu .item {padding: 0 60px 8px 0;}
+body.rtl .module-content ul.menu .image img {float: none;}
+
+body.rtl ul.menu ul {margin-left: 0;margin-right: 25px;}
+
+/* Footer */
+body.rtl #developed-by {float: right;}
+body.rtl #powered-by {float: left;}
+body.rtl #rocket {margin: 0 10px 0 0;}
+body.rtl #gantry-logo {margin-left: 0;margin-right: 10px;}
+body.rtl #gantry-totop {left: auto;right: 10px;}
+body.rtl #gantry-resetsettings {right: auto;left: 10px;}
+
+/* Typography */
+body.rtl .module-content .readon {float: left;}
+body.rtl .readon span {padding: 0 54px 0 6px;}
+body.rtl .readon .button {padding: 0 18px 0 6px;}
+body.rtl .readon:hover span, body.rtl .readon-main:hover .readon1-r {background-position: 100% -28px;}
+body.rtl .readon:hover .button {background-position: 100% -28px;}
+body.rtl .rokradios, body.rtl .rokchecks {padding: 1px 16px 5px 5px;display: inline-block;}
+body.rtl .rokradios {background-position: 100% 3px;}
+body.rtl .rokradios-active {background-position: 100% -240px;}
+body.rtl .rokchecks {background-position: 100% -493px;}
+body.rtl .rokchecks-active {background-position: 100% -742px;}
+body.rtl #form-login ul li a, body.rtl #com-form-login ul li a, body.rtl ul.rt-more-articles li a, body.rtl .rt-section-list ul li a, body.rtl ul.mostread li a, body.rtl ul.latestnews li a, body.rtl .weblinks ul li a {background-position: 100% 50%;}
+
+/* Breadcrumbs */
+body.rtl #breadcrumbs-home {float: right;margin-right: 0;margin-left: 5px;}
+body.rtl span.breadcrumbs img {float: right;}
+body.rtl span.breadcrumbs a, body.rtl span.no-link {padding: 0 8px 0 12px;float: right;}
+
+/* Login Form */
+body.rtl .login #form-login .readon .button {background-position: 100% 0;padding-left: 5px;padding-right: 54px;}
+body.rtl .login #form-login .readon:hover .button {background-position: 100% -28px;}
+.bodystyle-none.rtl .login .module-title {left: auto !important;right: 15px !important;}
+.bodystyle-none.rtl .login #form-login .inputbox {margin-right: 0 !important;}
+.bodystyle-none.rtl .login #form-login-remember {text-align: right;}
+.bodystyle-none.rtl .login .readon {float: right !important;}
+body.rtl #rt-popup #form-login .readon {float: right;}
+
+/* Login Form - Grid 3 */
+.col12.rtl .rt-grid-3 .login .module-title {right: auto;left: 15px;}
+.col12.rtl .rt-grid-3 .login #form-login .readon {float: left;margin-right: 0;margin-left: 48px;}
+.col12.rtl .rt-grid-3 .login #form-login .inputbox {margin-left: 0;margin-right: 5px;display: block;}
+
+/* Login Form - Grid 4 */
+.col12.rtl .rt-grid-4 .login .module-title {right: auto;left: 55px;}
+.col12.rtl .rt-grid-4 .login #form-login .readon {float: left;margin-right: 0;margin-left: 90px;}
+.col12.rtl .rt-grid-4 .login #form-login .inputbox {margin-left: 0;margin-right: 43px;display: block;}
+
+/* Login Form - Grid 5 */
+.col12.rtl .rt-grid-5 .login .module-title, .col12.rtl .rt-grid-6 .login .module-title, .col12.rtl .rt-grid-7 .login .module-title, .col12.rtl .rt-grid-8 .login .module-title, .col12.rtl .rt-grid-9 .login .module-title, .col12.rtl .rt-grid-10 .login .module-title, .col12.rtl .rt-grid-11 .login .module-title, .col12.rtl .rt-grid-12 .login .module-title {right: auto;left: 95px;}
+.col12.rtl .rt-grid-5 .login .readon, .col12.rtl .rt-grid-6 .login .readon, .col12.rtl .rt-grid-7 .login .readon, .col12.rtl .rt-grid-8 .login .readon, .col12.rtl .rt-grid-9 .login .readon, .col12.rtl .rt-grid-10 .login .readon, .col12.rtl .rt-grid-11 .login .readon, .col12.rtl .rt-grid-12 .login .readon {float: left;margin-right: 0;margin-left: 135px;}
+.col12.rtl .rt-grid-5 .login #form-login .inputbox, .col12.rtl .rt-grid-6 .login #form-login .inputbox, .col12.rtl .rt-grid-7 .login #form-login .inputbox, .col12.rtl .rt-grid-8 .login #form-login .inputbox, .col12.rtl .rt-grid-9 .login #form-login .inputbox, .col12.rtl .rt-grid-10 .login #form-login .inputbox, .col12.rtl .rt-grid-11 .login #form-login .inputbox, .col12.rtl .rt-grid-12 .login #form-login .inputbox {margin-left: 0;margin-right: 77px;display: block;}
+
+/* Font Sizer Feature */
+body.rtl #rt-accessibility {float: right;}
+body.rtl #rt-accessibility .rt-desc {float: right;padding-right: 0;padding-left: 5px;}
+
+/* Custom Content */
+body.rtl .content-image-surround {float: left;margin-left: 0;margin-right: 15px;}
+body.rtl .caption-icon {left: auto;right: 8px;}
+body.rtl .caption-text {left: auto;right: 34px;}
+body.rtl .content-mask {left: auto;right: 0;}
+body.rtl .rokstories-demo-title {margin-right: 0;margin-left: 12px;}
+body.rtl .rokstories-demo-title3 {margin: -27px 120px 0 0;}
+body.rtl .rokstories-demo-desc {margin-left: 0;margin-right: 122px;}

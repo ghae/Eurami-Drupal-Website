@@ -1,0 +1,50 @@
+/*!
+ * Dynamic display block module template: upright10 - Cascading Style Sheet 
+ * Copyright(c) 2008 - 2009 P. Blaauw All rights reserved. 
+ * Version 1.1 (11-FEB-2009) 
+ * Licenced under GPL license 
+ * http://www.gnu.org/licenses/gpl.html 
+ */ 
+div.ddblock-cycle-upright10 div.container{background-color:#f2f2f2; border:1px solid #e0e0e0; width:690px; padding:5px;}
+div.ddblock-cycle-upright10 div.container-inner{height:315px;position:relative;}
+div.ddblock-cycle-upright10 div.slider{float:left;width:690px;}
+div.ddblock-cycle-upright10 div.slider-inner{height:315px;overflow:hidden;position:relative;visibility:hidden;}
+div.ddblock-cycle-upright10 div.slide{display:none;height:100%;right:0;position:absolute;top:0;}
+
+div.ddblock-cycle-upright10 div.slide-img{
+position:relative;
+float:right;
+width:690px;
+}
+div.ddblock-cycle-upright10 div.slide-inner img{ height:315px;margin:0 !important;padding:0 !important; width:690px; border:2px solid #fff;}
+div.ddblock-cycle-upright10 div.slide-text{ float:left; width:0px; height:293px; padding:5px; color:#fff; overflow:hidden; text-align:left; position:relative;}
+
+div.ddblock-cycle-upright10 div.slide-text{background:transparent url(../images/transparent_bg.png) repeat scroll 0 0!important;position:absolute;}
+div.ddblock-cycle-upright10 div.slide-text-horizontal{height:85px;left:0;width:690px;}
+div.ddblock-cycle-upright10 div.slide-text-vertical{height:315px;width:150px;}
+div.ddblock-cycle-upright10 div.slide-text-top{top:8px;}
+div.ddblock-cycle-upright10 div.slide-text-right{bottom:0;right:30px;}
+div.ddblock-cycle-upright10 div.slide-text-bottom{bottom:7px;}
+div.ddblock-cycle-upright10 div.slide-text-left{bottom:0;left:1px;}
+div.ddblock-cycle-upright10 div.slide-text-inner{padding:7px;}
+div.ddblock-cycle-upright10 div.slide-title h2{ color:#fff; font-size:18px;}
+div.ddblock-cycle-upright10 div.slide-body-inner{color:#fff;}
+div.ddblock-cycle-upright10 div.slide-body-inner p{margin:0 8px 0 0;padding:0;}
+
+
+div.ddblock-cycle-upright10 div.slide-read-more{width:110px;}
+div.ddblock-cycle-upright10 div.slide-read-more p{padding:0;margin:0;}
+div.ddblock-cycle-upright10 div.slide-read-more a{background:url(../images/readmore.png) no-repeat;border:none;bottom:5px;color:#fff;font-size:14px;font-family:times New Roman;margin:0;padding:4px 0 4px 19px;position:absolute;text-decoration:none;text-align:left;width:100px;}
+
+
+div.ddblock-cycle-upright10 div.slide-read-more-horizontal a{right:-17px;}
+div.ddblock-cycle-upright10 div.slide-read-more-vertical a{right:5px;}
+div.ddblock-cycle-upright10 div.slide-read-more a:hover{background:url(../images/readmore-hover.png) no-repeat;text-decoration:underline;}
+div.ddblock-cycle-upright10 div.slide-read-more-horizontal a:hover{right:-17px;}
+div.ddblock-cycle-upright10 div.slide-read-more-vertical a:hover{right:5px;}
+
+
+div.ddblock-cycle-upright10 div.number-pager{display:block;float:right;height:15px;right:8px; top:5px; position:absolute;width:350px; z-index:1000; text-align:right;}
+div.ddblock-cycle-upright10 div.number-pager a{background:none;border:1px solid #fff;display:inline-block;font-family:Tahoma,Arial,sans-serif;font-size:.7em;font-weight:bold;height:13px;line-height:13px;margin:0 2px 0 0;text-align:center;text-decoration:none;width:13px; color:#fff;}
+div.ddblock-cycle-upright10 div.number-pager a.activeSlide{background:#ff2015;}
+div.ddblock-cycle-upright10 div.number-pager a:focus{outline:none;}
