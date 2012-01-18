@@ -116,7 +116,7 @@ function getSafeValue($node, $field) {
         
         <?php if(getSafeValue($node, 'field_website_cn')):?>
         <div class="telephone">
-          <strong><img src="<?php echo ICON_PATH?>icon-email.png" /> <span><?php echo getSafeValue($node, 'field_email_cn')?></span></strong>
+          <strong><img src="<?php echo ICON_PATH?>icon-email.png" /> <span><?php echo getSafeValue($node, 'field_website_cn')?></span></strong>
         </div>
         <?php endif;?>
         
@@ -164,7 +164,7 @@ function getSafeValue($node, $field) {
 		<td width="50%">
 		<?php echo $node->locations[1]['name'].'<br>';               
         echo $node->locations[1]['street'].'<br>';
-        echo $node->locations[1]['postal_code'] .' '. $node->locations[0]['city'].'<br>';
+        echo $node->locations[1]['postal_code'] .' '. $node->locations[1]['city'].'<br>';
         if(!empty($node->locations[1]['province_name'])) {
           echo $node->locations[1]['province_name'] .' ';
         }
